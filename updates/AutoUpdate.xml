@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Updates>
- <Update
-    Channels="Stable,Preview"
-    NewVersion="1.0.1225.0"
-    UpdateFileUri="https://github.com/ServerWMC/serverwmc.github.io/releases/download/1.0.1225/Installer_ServerWMC.msi"
-    UpdateSignatureUri="https://github.com/ServerWMC/serverwmc.github.io/releases/download/1.0.1225/Installer_ServerWMC.msi.signature"
-    UpdateInfoUri="https://serverwmc.github.io/changelog.html"
-    InstallFileName="Installer_ServerWMC.msi"
-    Categories="XBMC PVR Backend">
+  <Update
+     Channels="Stable,Preview"
+     NewVersion="1.0.1225.0"
+     UpdateFileUri="https://github.com/ServerWMC/serverwmc.github.io/releases/download/1.0.1225/Installer_ServerWMC.msi"
+     UpdateSignatureUri="https://github.com/ServerWMC/serverwmc.github.io/releases/download/1.0.1225/Installer_ServerWMC.msi.signature"
+     UpdateInfoUri="https://serverwmc.github.io/changelog.html"
+     InstallFileName="Installer_ServerWMC.msi"
+     Categories="XBMC PVR Backend">
     <Description>ServerWMC</Description>
   </Update>
   <Update
@@ -15,6 +15,16 @@
     NewVersion="1.0.1234.0"
     UpdateFileUri="https://github.com/ServerWMC/serverwmc.github.io/releases/download/1.0.1234/Installer_ServerWMC.msi"
     UpdateSignatureUri="https://github.com/ServerWMC/serverwmc.github.io/releases/download/1.0.1234/Installer_ServerWMC.msi.signature"
+    UpdateInfoUri="https://serverwmc.github.io/changelog.html"
+    InstallFileName="Installer_ServerWMC.msi"
+    Categories="XBMC PVR Backend">
+    <Description>ServerWMC</Description>
+  </Update>
+  <Update
+    Channels="Stable,Preview"
+    NewVersion="1.0.1235.0"
+    UpdateFileUri="https://github.com/ServerWMC/serverwmc.github.io/releases/download/1.0.1235/Installer_ServerWMC.msi"
+    UpdateSignatureUri="https://github.com/ServerWMC/serverwmc.github.io/releases/download/1.0.1235/Installer_ServerWMC.msi.signature"
     UpdateInfoUri="https://serverwmc.github.io/changelog.html"
     InstallFileName="Installer_ServerWMC.msi"
     Categories="XBMC PVR Backend">
