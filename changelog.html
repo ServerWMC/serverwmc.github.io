@@ -9,7 +9,7 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <meta name=ProgId content=Word.Document>
 <meta name=Generator content="Microsoft Word 11">
 <meta name=Originator content="Microsoft Word 11">
-<link rel=File-List href="change%20log%20-%20Server_files/filelist.xml">
+<link rel=File-List href="changelog_files/filelist.xml">
 <title>To start, you need to download windows server installer
 'ServerWMC_installer' on the machine running WMC, and the xbmc client sofware
 'pvr-wmc' for whichever OS you are testing</title>
@@ -20,17 +20,17 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <!--[if gte mso 9]><xml>
  <o:DocumentProperties>
   <o:LastAuthor>VD</o:LastAuthor>
-  <o:Revision>113</o:Revision>
-  <o:TotalTime>290</o:TotalTime>
+  <o:Revision>114</o:Revision>
+  <o:TotalTime>299</o:TotalTime>
   <o:Created>2013-08-09T22:45:00Z</o:Created>
-  <o:LastSaved>2016-09-10T00:54:00Z</o:LastSaved>
+  <o:LastSaved>2016-09-22T20:08:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>4680</o:Words>
-  <o:Characters>26682</o:Characters>
+  <o:Words>4634</o:Words>
+  <o:Characters>26418</o:Characters>
   <o:Company>Home</o:Company>
-  <o:Lines>222</o:Lines>
-  <o:Paragraphs>62</o:Paragraphs>
-  <o:CharactersWithSpaces>31300</o:CharactersWithSpaces>
+  <o:Lines>220</o:Lines>
+  <o:Paragraphs>61</o:Paragraphs>
+  <o:CharactersWithSpaces>30991</o:CharactersWithSpaces>
   <o:Version>11.9999</o:Version>
  </o:DocumentProperties>
 </xml><![endif]--><!--[if gte mso 9]><xml>
@@ -239,128 +239,30 @@ change log:<o:p></o:p></span></b></p>
 <p class=MsoPlainText><b style='mso-bidi-font-weight:normal'><span
 style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
 
-<p class=MsoPlainText><i style='mso-bidi-font-style:normal'><span
-style='font-family:"Times New Roman";color:blue'>Preview-</span></i><span
-style='font-family:"Times New Roman"'>Build 1234, assembly version 1.0.0.60 <o:p></o:p></span></p>
+<p class=MsoPlainText><span style='font-family:"Times New Roman"'>Build 1236,
+assembly version 1.0.0.61 <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-family:"Times New Roman"'>Fixed
-region dependent exception on tuner status<o:p></o:p></span></p>
+a bug in the <span class=SpellE>remuxer</span> that caused small packets to not
+be transmitted correctly.<span style='mso-spacerun:yes'>  </span>Applies to
+both mpeg2 and h.264, but the problem was only reported on some h.264
+broadcasts.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span style='font-family:"Times New Roman"'>First
-cut at freeing up tuner when <span class=SpellE>Emby</span> fails to open a
-live stream <span class=SpellE>url</span><o:p></o:p></span></p>
+</span></span></span><![endif]><span style='font-family:"Times New Roman"'>The <span
+class=SpellE>remux</span> now generates a monotonic DTS in the transport stream
+files it produces.<span style='mso-spacerun:yes'>  </span>Enabled by default
+for broadcasts in h.264.<o:p></o:p></span></p>
 
-<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'><span
-style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
-
-<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'><span
-style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
-
-<p class=MsoPlainText><i style='mso-bidi-font-style:normal'><span
-style='font-family:"Times New Roman";color:blue'>Preview-</span></i><span
-style='font-family:"Times New Roman"'>Build 1233, assembly version 1.0.0.60 <o:p></o:p></span></p>
-
-<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
-tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
-style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Cleaned
-up formatting for when Epg123 appends the season and episode number to the
-episode description<o:p></o:p></span></p>
-
-<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
-tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
-style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Changed
-the default client inactive period to 20 min from 10 min<o:p></o:p></span></p>
-
-<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'><span
-style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
-
-<p class=MsoPlainText><i style='mso-bidi-font-style:normal'><span
-style='font-family:"Times New Roman";color:blue'>Preview-</span></i><span
-style='font-family:"Times New Roman"'>Build 1232, assembly version 1.0.0.60 <o:p></o:p></span></p>
-
-<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
-tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
-style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Fixed
-bug that caused <span class=SpellE>plex</span> to only play one stream at a
-time<o:p></o:p></span></p>
-
-<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'><span
-style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
-
-<p class=MsoPlainText><i style='mso-bidi-font-style:normal'><span
-style='font-family:"Times New Roman";color:blue'>Preview-</span></i><span
-style='font-family:"Times New Roman"'>Build 1231, assembly version 1.0.0.60 <o:p></o:p></span></p>
-
-<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
-tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
-style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Series
-timers that have no upcoming episodes are now given a user settable date (enabled
-by default, default date is 12/31/2099)<o:p></o:p></span></p>
-
-<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
-tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
-style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Fixed
-parsing bug with images <span class=SpellE>urls</span> (effects EPG123 users
-using <span class=SpellE>SchedulesDirect</span> for guide data)<o:p></o:p></span></p>
-
-<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'><span
-style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
-
-<p class=MsoPlainText><i style='mso-bidi-font-style:normal'><span
-style='font-family:"Times New Roman";color:blue'>Preview-</span></i><span
-style='font-family:"Times New Roman"'>Build 1230, assembly version 1.0.0.60 <o:p></o:p></span></p>
-
-<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
-tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
-style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Fixed
-bug with live-<span class=SpellE>tv</span> <span class=SpellE>dlna</span> mode
-(<span class=SpellE>Emby</span>)<o:p></o:p></span></p>
-
-<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'><span
-style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
-
-<p class=MsoPlainText><i style='mso-bidi-font-style:normal'><span
-style='font-family:"Times New Roman";color:blue'>Preview-</span></i><span
-style='font-family:"Times New Roman"'>Build 1229, assembly version 1.0.0.60 <o:p></o:p></span></p>
-
-<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
-tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
-style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Added
-support for <span class=SpellE>timeshift</span> buffer display for
-Kodi17-Krypton<o:p></o:p></span></p>
-
-<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
-tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
-style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Fixed
-bug with the reporting Joint Stereo channels (<span class=SpellE>Emby</span>)<o:p></o:p></span></p>
-
-<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
-tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
-style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Responding
-to <span class=SpellE>DeleteRecording</span> command from clients can now be
-disabled (see Recordings tab)<o:p></o:p></span></p>
-
-<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'><span
-style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
-
-<p class=MsoPlainText><i style='mso-bidi-font-style:normal'><span
-style='font-family:"Times New Roman";color:blue'>Preview-</span></i><span
-style='font-family:"Times New Roman"'>Build 1228, assembly version 1.0.0.60 <o:p></o:p></span></p>
+<p class=MsoPlainText style='text-indent:.25in'><span style='font-family:"Times New Roman"'>-<span
+style='mso-tab-count:1'>       </span>Fixed bug that caused <span class=SpellE>remuxed</span>
+(.<span class=SpellE>ts</span>) files to sometimes not be deleted when using
+http streaming.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
@@ -368,6 +270,20 @@ style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-family:"Times New Roman"'>Fixed
 a bug that caused series deletion to fail in <span class=SpellE>Kodi</span>
 versions less than Kodi16.<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Fixed
+bug that cause deleted recordings to continue to show up in recording list
+(zombie<span style='mso-spacerun:yes'>  </span>recordings) <o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Responding
+to <span class=SpellE>DeleteRecording</span> command from clients can now be
+disabled (see Recordings tab)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
@@ -385,8 +301,8 @@ to true in settings file<o:p></o:p></span></p>
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-family:"Times New Roman"'>Added
-option to substitute the original air date for the recorded date on all
-recordings (<span class=SpellE>Kodi</span> only) <o:p></o:p></span></p>
+option to substitute the original air date for the recorded date on all recordings
+(<span class=SpellE>Kodi</span> only) <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.75in'><span style='font-family:"Times New Roman"'>-
 Set <span class=SpellE><i style='mso-bidi-font-style:normal'>UseOrigAirDateAsRecordingDate</i></span>
@@ -399,9 +315,8 @@ style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
 "Times New Roman"'>ClientRestriction</span></span><span style='font-family:
 "Times New Roman"'> is expanded to allow a DLNA device/tuner to be assigned to
 a client, this allows you to enable <span class=SpellE>dlna</span> mode for
-specified clients.<span style='mso-spacerun:yes'>  </span>Also allows a single
-tuner to be assigned to that client.<span style='mso-spacerun:yes'> 
-</span>Example:<o:p></o:p></span></p>
+specified clients.<span style='mso-spacerun:yes'>  </span>Also allows a single tuner
+to be assigned to that client.<span style='mso-spacerun:yes'>  </span>Example:<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.75in'><span style='font-family:"Times New Roman"'>&lt;<span
 class=SpellE>ClientRestriction</span>&gt;<o:p></o:p></span></p>
@@ -428,53 +343,84 @@ class=SpellE>DLNA_DeviceIP</span>&gt;<span style='mso-spacerun:yes'>  
 </span>&lt;<span class=GramE>!--</span><span style='mso-spacerun:yes'>  
 </span>assign this device IP to this client (default: empty string)--&gt;<o:p></o:p></span></p>
 
-<p class=MsoPlainText style='margin-left:.75in'><span style='font-family:"Times New Roman"'><span
-style='mso-spacerun:yes'>  </span>&lt;/<span class=SpellE>ClientRestriction</span>&gt;<o:p></o:p></span></p>
-
-<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'><span
-style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
-
-<p class=MsoPlainText><i style='mso-bidi-font-style:normal'><span
-style='font-family:"Times New Roman";color:blue'>Preview-</span></i><span
-style='font-family:"Times New Roman"'>Build 1227, assembly version 1.0.0.60 <o:p></o:p></span></p>
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'>  </span>&lt;/<span class=SpellE>ClientRestriction</span>&gt;<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-family:"Times New Roman"'>Fixed
-a bug in the <span class=SpellE>remuxer</span> that caused small packets to not
-be transmitted correctly.<span style='mso-spacerun:yes'>  </span>Applies to
-both mpeg2 and h.264, but the problem was only reported on some h.264
-broadcasts.<o:p></o:p></span></p>
+region dependent exception on tuner status<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span style='font-family:"Times New Roman"'>The <span
-class=SpellE>remux</span> now generates a monotonic DTS in the transport stream
-files it produces.<span style='mso-spacerun:yes'>  </span>Enabled by default
-for broadcasts in h.264.<o:p></o:p></span></p>
+</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Stops
+stream if live stream <span class=SpellE>url</span> was not opened by client <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span style='font-family:"Times New Roman"'>A <span
-class=SpellE>RecorderInfo</span> auto-reset was added in an attempt to fix this
-data when it errors out in the COM drivers.<o:p></o:p></span></p>
+</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Cleaned
+up formatting for when Epg123 appends the season and episode number to the
+episode description<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Changed
+the default client inactive period to 20 min from 10 min<o:p></o:p></span></p>
 
-<p class=MsoPlainText><i style='mso-bidi-font-style:normal'><span
-style='font-family:"Times New Roman";color:blue'>Preview-</span></i><span
-style='font-family:"Times New Roman"'>Build 1226, assembly version 1.0.0.60 <o:p></o:p></span></p>
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Fixed
+bug that caused <span class=SpellE>plex</span> to only play one stream at a
+time<o:p></o:p></span></p>
 
-<p class=MsoPlainText style='text-indent:.25in'><span style='font-family:"Times New Roman"'>-<span
-style='mso-tab-count:1'>       </span>Fixed bug that caused <span class=SpellE>remuxed</span>
-(.<span class=SpellE>ts</span>) files to sometimes not be deleted when using
-http streaming.<o:p></o:p></span></p>
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Series
+timers that have no upcoming episodes are now given a user settable date
+(enabled by default, default date is 12/31/2099)<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Fixed
+parsing bug with images <span class=SpellE>urls</span> (effects EPG123 users
+using <span class=SpellE>SchedulesDirect</span> for guide data)<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Fixed
+bug with live-<span class=SpellE>tv</span> <span class=SpellE>dlna</span> mode
+(<span class=SpellE>Emby</span>)<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Added
+support for <span class=SpellE>timeshift</span> buffer display for
+Kodi17-Krypton<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"Times New Roman"'>Fixed
+bug with the reporting Joint Stereo channels (<span class=SpellE>Emby</span>) <o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"Times New Roman"'>A tuner
+auto-reset was added in an attempt to fix this data when it errors out in the
+COM drivers.<o:p></o:p></span></p>
 
 <p class=MsoPlainText><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
@@ -598,9 +544,9 @@ style='font-family:"Times New Roman"'>- enable by adding ‘jpg’ extension to
 auto removal extensions (see Recordings tab) (<span class=SpellE>Emby</span>)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-<span
-style='mso-tab-count:1'>       </span>Added option to display Premiere and Finale
-in EPG for <span class=SpellE>Kodi</span> clients (strings are editable in
-settings) (<span class=SpellE>Kodi</span>)<o:p></o:p></span></p>
+style='mso-tab-count:1'>       </span>Added option to display Premiere and
+Finale in EPG for <span class=SpellE>Kodi</span> clients (strings are editable
+in settings) (<span class=SpellE>Kodi</span>)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-<span
 style='mso-tab-count:1'>       </span><span class=SpellE>IsFinale</span> flag
@@ -669,8 +615,9 @@ class=SpellE>KeepLengths</span> to never be deleted by the <span class=SpellE>wm
 file delete service (applies to primetime recordings and Jarvis) <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-<span
-style='mso-tab-count:1'>       </span>Fixed bug in installer that caused it to not
-recognize win10 based <span class=SpellE>dlls</span> (still needs to be tested)<o:p></o:p></span></p>
+style='mso-tab-count:1'>       </span>Fixed bug in installer that caused it to
+not recognize win10 based <span class=SpellE>dlls</span> (still needs to be
+tested)<o:p></o:p></span></p>
 
 <p class=MsoPlainText><b style='mso-bidi-font-weight:normal'><span
 style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
@@ -693,18 +640,19 @@ style='mso-spacerun:yes'>  </span>(<span class=SpellE>Emby</span> only)<o:p></o:
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-family:"Times New Roman"'>Implemented
-<span class=SpellE>PrimeTimeRecording</span> feature, allowing for the automatic
-recording all shows on a specified channel in specific time window.<span
-style='mso-spacerun:yes'>  </span>Requires editing of the settings file, entry
-examples are provided.<span style='mso-spacerun:yes'>  </span>Feature includes:<o:p></o:p></span></p>
+<span class=SpellE>PrimeTimeRecording</span> feature, allowing for the
+automatic recording all shows on a specified channel in specific time
+window.<span style='mso-spacerun:yes'>  </span>Requires editing of the settings
+file, entry examples are provided.<span style='mso-spacerun:yes'> 
+</span>Feature includes:<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in;mso-list:
 l1 level2 lfo4;tab-stops:list 1.0in'><![if !supportLists]><span
 style='font-family:"Times New Roman"'><span style='mso-list:Ignore'>1.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
 style='font-family:"Times New Roman"'>Auto recordings can be set to multiple
-days of the week for each <span class=SpellE>PrimeTimeRecording</span> specified,
-including: weekend, weekdays, or all<o:p></o:p></span></p>
+days of the week for each <span class=SpellE>PrimeTimeRecording</span>
+specified, including: weekend, weekdays, or all<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in;mso-list:
 l1 level2 lfo4;tab-stops:list 1.0in'><![if !supportLists]><span
@@ -838,9 +786,9 @@ style='font-family:"Times New Roman"'>Added Http Service tab<o:p></o:p></span></
 l1 level2 lfo4;tab-stops:list 1.0in'><![if !supportLists]><span
 style='font-family:"Times New Roman"'><span style='mso-list:Ignore'>3.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
-style='font-family:"Times New Roman"'>Live <span class=SpellE>tv</span> and
-recordings can now be started by external players like VLC using <span
-class=SpellE>urls</span> over a network<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Live <span class=SpellE>tv</span> and recordings
+can now be started by external players like VLC using <span class=SpellE>urls</span>
+over a network<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in;mso-list:
 l1 level2 lfo4;tab-stops:list 1.0in'><![if !supportLists]><span
@@ -997,15 +945,15 @@ be checked too frequently, also got rid of extraneous drive scans <o:p></o:p></s
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-family:"Times New Roman";
-mso-bidi-font-family:"Courier New"'>Recording drive space check is more accurate
-and efficient.<o:p></o:p></span></p>
+mso-bidi-font-family:"Courier New"'>Recording drive space check is more
+accurate and efficient.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo4;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-family:"Times New Roman";
-mso-bidi-font-family:"Courier New"'>Fixed bug in merge channel search that
-failed to filter out different channel numbers<o:p></o:p></span></p>
+mso-bidi-font-family:"Courier New"'>Fixed bug in merge channel search that failed
+to filter out different channel numbers<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo4;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
@@ -1090,8 +1038,8 @@ normal'><o:p></o:p></b></span></p>
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-family:"Times New Roman";
-mso-bidi-font-family:"Courier New"'>Supports <span class=SpellE>dlna</span> live-<span
-class=SpellE>tv</span> streams by default for <span class=SpellE>dlna</span>
+mso-bidi-font-family:"Courier New"'>Supports <span class=SpellE>dlna</span>
+live-<span class=SpellE>tv</span> streams by default for <span class=SpellE>dlna</span>
 capable <span class=SpellE>HDHomerun</span> tuners (MBS only)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo4;
@@ -1209,10 +1157,9 @@ l1 level2 lfo4;tab-stops:list 1.0in'><![if !supportLists]><span
 style='font-family:"Times New Roman"'><span style='mso-list:Ignore'>1.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
 style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'>For
-default channel icons, save image as ‘<span class=SpellE>default.jpg</span>’
-and store in:<span style='mso-spacerun:yes'>  </span>…</span>\<span
-class=SpellE><span style='font-family:"Times New Roman";mso-bidi-font-family:
-"Courier New"'>TempSWMC\imageCache\userChannelImages</span></span><span
+default channel icons, save image as ‘<span class=SpellE>default.jpg</span>’ and
+store in:<span style='mso-spacerun:yes'>  </span>…</span>\<span class=SpellE><span
+style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'>TempSWMC\imageCache\userChannelImages</span></span><span
 style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'><o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in;mso-list:
@@ -1307,9 +1254,9 @@ class=SpellE>config</span> file, if not it will be ignored<o:p></o:p></span></p>
 l1 level2 lfo4;tab-stops:list 1.0in'><![if !supportLists]><span
 style='font-family:"Times New Roman"'><span style='mso-list:Ignore'>3.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
-style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'>This folder
-must be writeable by the account <span class=SpellE>serverwmc</span> is run
-under.<o:p></o:p></span></p>
+style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'>This
+folder must be writeable by the account <span class=SpellE>serverwmc</span> is
+run under.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in;mso-list:
 l1 level2 lfo4;tab-stops:list 1.0in'><![if !supportLists]><span
@@ -1435,8 +1382,8 @@ tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Ro
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-family:"Times New Roman";
 mso-bidi-font-family:"Courier New"'>Multiple clients using the same name now
-detected and handled correctly (clients with same name will no longer steal tuners
-from each other)<o:p></o:p></span></p>
+detected and handled correctly (clients with same name will no longer steal
+tuners from each other)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo4;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
@@ -1600,8 +1547,8 @@ tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Ro
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span class=SpellE><span style='font-family:
 "Times New Roman";mso-bidi-font-family:"Courier New"'>GetRecordings</span></span><span
-style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'> execution
-time decreased.<o:p></o:p></span></p>
+style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'>
+execution time decreased.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo4;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
@@ -1627,8 +1574,8 @@ update-available popup messages to client (<span class=SpellE>xbmc</span>)<o:p><
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-family:"Times New Roman";
-mso-bidi-font-family:"Courier New"'>Bit rates of audio and video streams are now
-calculated on the fly during <span class=SpellE>remux</span> (mb3)<o:p></o:p></span></p>
+mso-bidi-font-family:"Courier New"'>Bit rates of audio and video streams are
+now calculated on the fly during <span class=SpellE>remux</span> (mb3)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo4;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
@@ -1844,8 +1791,8 @@ channels now detected and <span class=SpellE>remuxed</span> more efficiently<o:p
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-family:"Times New Roman";
-mso-bidi-font-family:"Courier New"'>Audio-only <span class=SpellE>Tv</span> channels
-can now be displayed in the ‘radio’ section of <span class=SpellE>xbmc</span>
+mso-bidi-font-family:"Courier New"'>Audio-only <span class=SpellE>Tv</span>
+channels can now be displayed in the ‘radio’ section of <span class=SpellE>xbmc</span>
 (requires .94 or higher of <span class=SpellE>pvr.wmc</span>)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo4;
@@ -1932,9 +1879,9 @@ order, and services are probed looking for copy-free sources<o:p></o:p></span></
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-family:"Times New Roman";
-mso-bidi-font-family:"Courier New"'>For live-<span class=SpellE>tv</span>
-streams, multiple tuners are attempted even if a COM error is thrown trying to
-access recorder<o:p></o:p></span></p>
+mso-bidi-font-family:"Courier New"'>For live-<span class=SpellE>tv</span> streams,
+multiple tuners are attempted even if a COM error is thrown trying to access
+recorder<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo4;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
@@ -2346,8 +2293,8 @@ beyond minimal number of headers<o:p></o:p></span></p>
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-family:"Times New Roman";
-mso-bidi-font-family:"Courier New"'>Fixed crash when channel icons are copied to
-a read-only network share<o:p></o:p></span></p>
+mso-bidi-font-family:"Courier New"'>Fixed crash when channel icons are copied
+to a read-only network share<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo4;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
@@ -2691,8 +2638,8 @@ tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Ro
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span class=SpellE><span style='font-family:
 "Times New Roman";mso-bidi-font-family:"Courier New"'>Remux</span></span><span
-style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'> now runs
-in thread with variable priority (priority set in <span class=SpellE>config</span>)<o:p></o:p></span></p>
+style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'> now
+runs in thread with variable priority (priority set in <span class=SpellE>config</span>)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo4;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
@@ -2860,8 +2807,8 @@ style='font-family:"Times New Roman";mso-bidi-font-family:"Courier New"'><o:p>&n
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
 style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span style='font-family:"Times New Roman";
-mso-bidi-font-family:"Courier New"'>Fixed bug with setting of timers failing when
-updated EPG data contains new start/end times<o:p></o:p></span></p>
+mso-bidi-font-family:"Courier New"'>Fixed bug with setting of timers failing
+when updated EPG data contains new start/end times<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo4;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:"Times New Roman"'><span
