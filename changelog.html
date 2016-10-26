@@ -4,7 +4,8 @@
 <meta name="ProgId" content="Word.Document">
 <meta name="Generator" content="Microsoft Word 11">
 <meta name="Originator" content="Microsoft Word 11">
-<link rel="File-List" href="changelog_files/filelist.xml"><title>To start, you need to download windows server installer
+<link rel="File-List" href="changelog_files/filelist.xml"><title>To
+start, you need to download windows server installer
 'ServerWMC_installer' on the machine running WMC, and the xbmc client
 sofware 'pvr-wmc' for whichever OS you are testing</title>
 
@@ -55,9 +56,7 @@ mso-paper-source:0;}
 div.Section1
 {page:Section1;}
 -->
-</style><!--[if gte mso 10]> <style> /* Style Definitions */ table.MsoNormalTable {mso-style-name:"Table Normal"; mso-tstyle-rowband-size:0; mso-tstyle-colband-size:0; mso-style-noshow:yes; mso-style-parent:""; mso-padding-alt:0in 5.4pt 0in 5.4pt; mso-para-margin:0in; mso-para-margin-bottom:.0001pt; mso-pagination:widow-orphan; font-size:10.0pt; font-family:"Times New Roman"; mso-ansi-language:#0400; mso-fareast-language:#0400; mso-bidi-language:#0400;} </style> <![endif]-->
-</head>
-
+</style><!--[if gte mso 10]> <style> /* Style Definitions */ table.MsoNormalTable {mso-style-name:"Table Normal"; mso-tstyle-rowband-size:0; mso-tstyle-colband-size:0; mso-style-noshow:yes; mso-style-parent:""; mso-padding-alt:0in 5.4pt 0in 5.4pt; mso-para-margin:0in; mso-para-margin-bottom:.0001pt; mso-pagination:widow-orphan; font-size:10.0pt; font-family:"Times New Roman"; mso-ansi-language:#0400; mso-fareast-language:#0400; mso-bidi-language:#0400;} </style> <![endif]--></head>
 <body style="" lang="EN-US">
 <div class="Section1">
 <p class="MsoPlainText"><b><span style="font-family: &quot;Times New Roman&quot;;">Server
@@ -67,51 +66,47 @@ change log:<o:p></o:p></span></b></p>
 </span><span style="font-family: &quot;Times New Roman&quot;;">Build
 1240, assembly version 1.0.0.61 <o:p></o:p></span></p>
 <p class="MsoPlainText"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>- play restore points are now
+</span>- play resume points are now
 shared with WMC (turned on by default)<o:p></o:p></span></p>
 <p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">-
 <span class="GramE">standard</span> definition
 channels can be automatically
-filtered out of channel list (see HideStandardDefChannels)<o:p></o:p></span></p>
+filtered out of the master channel list (see HideStandardDefChannels)<o:p></o:p></span></p>
 <p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">-
 <span class="GramE">added</span> ability to define
-multiple channel groups
-setting using xml, look for example in the new settings file.<span style="">&nbsp; </span>Here is an addition
+multiple channel groups using xml, look for </span><span style="font-family: &quot;Times New Roman&quot;;">XmlDefinedChannelGroups </span><span style="font-family: &quot;Times New Roman&quot;;">example in the new settings file.<span style="">&nbsp; </span></span></p><p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">&nbsp; Here is an addition
 example with comments:<o:p></o:p></span></p>
 <p class="MsoPlainText" style="margin-left: 1in;"><span style="font-family: &quot;Times New Roman&quot;;">&lt;XmlDefinedChannelGroups&gt;<o:p></o:p></span></p>
 <p class="MsoPlainText" style="margin-left: 1in;"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp;
 </span>&lt;XmlDefinedChannelGroup&gt;<o:p></o:p></span></p>
 <p class="MsoPlainText" style="margin-left: 1in;"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span>&lt;Name&gt;My Channel Group&lt;/Name&gt;<span style="">&nbsp;&nbsp;&nbsp; </span>&lt;<span class="GramE">!--</span> the name
-of the channel group, using the name _MasterChannelGroup_ will filter
-all
-channels used in serverwmc --&gt;<o:p></o:p></span></p>
+of the channel group;&nbsp; using the name "_MasterChannelGroup_" will use this group as the master channel list --&gt;<o:p></o:p></span></p>
 <p class="MsoPlainText" style="margin-left: 1in;"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span>&lt;IncludeChannelNumbers&gt;645, 700-800, 837,
 891&lt;/IncludeChannelNumbers<span class="GramE">&gt;<span style="">&nbsp; </span>&lt;</span>!--
-the channels to include,
+include these channels ranges and numbers,
 leaving this blank will include all channels --&gt;<o:p></o:p></span></p>
 <p class="MsoPlainText" style="margin-left: 1in;"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span>&lt;IncludeChannelCallSigns&gt;msNBC,
-CNN&lt;/IncludeChannelCallSigns&gt;<o:p></o:p></span></p>
+CNN&lt;/IncludeChannelCallSigns&gt;</span><span style="font-family: &quot;Times New Roman&quot;;"><span class="GramE"><span style="">&nbsp; </span>&lt;</span>!-- include channels with these call signs --&gt;</span></p>
 <p class="MsoPlainText" style="margin-left: 1in;"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span>&lt;ExcludeChannelNumbers&gt;720-725,
-715&lt;/ExcludeChannelNumbers&gt;<o:p></o:p></span></p>
+715&lt;/ExcludeChannelNumbers&gt;</span><span style="font-family: &quot;Times New Roman&quot;;"></span><span style="font-family: &quot;Times New Roman&quot;;"><span class="GramE"><span style="">&nbsp; </span>&lt;</span>!-- exclude these channel ranges and numbers --&gt;</span></p>
 <p class="MsoPlainText" style="margin-left: 1in;"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span>&lt;ExcludeChannelCallSigns&gt;TBNHD,
-FNCHD&lt;/ExcludeChannelCallSigns&gt;<o:p></o:p></span></p>
+FNCHD&lt;/ExcludeChannelCallSigns&gt;</span><span style="font-family: &quot;Times New Roman&quot;;"><span class="GramE"><span style=""> </span>&nbsp;&lt;</span>!-- call signs to exclude --&gt;</span></p>
 <p class="MsoPlainText" style="margin-left: 1in;"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span>&lt;HDOnly&gt;true&lt;/HDOnly<span class="GramE">&gt;<span style="">&nbsp;
 </span>&lt;</span>!-- include only channels flagged
-as HD --&gt;<o:p></o:p></span></p>
+as HD capable --&gt;<o:p></o:p></span></p>
 <p class="MsoPlainText" style="margin-left: 1in;"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span>&lt;SDOnly&gt;false&lt;/SDOnly<span class="GramE">&gt;<span style="">&nbsp;
 </span>&lt;</span>!-- include only channels that are
-SD --&gt;<o:p></o:p></span></p>
+SD only --&gt;<o:p></o:p></span></p>
 <p class="MsoPlainText" style="margin-left: 1in;"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span>&lt;IncludeTheseLanguagesOnly&gt;en,
-es-u&lt;/IncludeTheseLanguagesOnly&gt; &lt;<span class="GramE">!--</span> include
-shannels that have programming in these languages --&gt;<o:p></o:p></span></p>
+es&lt;/IncludeTheseLanguagesOnly&gt; &lt;<span class="GramE">!--</span> only&nbsp;include channels that have programming in these languages --&gt;<o:p></o:p></span></p>
 <p class="MsoPlainText" style="margin-left: 1in;"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp;
 </span>&lt;/XmlDefinedChannelGroup&gt;<o:p></o:p></span></p>
 <p class="MsoPlainText" style="margin-left: 1in;"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;
