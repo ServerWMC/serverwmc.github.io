@@ -20,23 +20,22 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <!--[if gte mso 9]><xml>
  <o:DocumentProperties>
   <o:LastAuthor>VD</o:LastAuthor>
-  <o:Revision>118</o:Revision>
-  <o:TotalTime>309</o:TotalTime>
+  <o:Revision>119</o:Revision>
+  <o:TotalTime>319</o:TotalTime>
   <o:Created>2013-08-09T22:45:00Z</o:Created>
-  <o:LastSaved>2016-10-04T17:04:00Z</o:LastSaved>
+  <o:LastSaved>2016-10-26T18:17:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>4770</o:Words>
-  <o:Characters>27191</o:Characters>
+  <o:Words>4964</o:Words>
+  <o:Characters>28300</o:Characters>
   <o:Company>Home</o:Company>
-  <o:Lines>226</o:Lines>
-  <o:Paragraphs>63</o:Paragraphs>
-  <o:CharactersWithSpaces>31898</o:CharactersWithSpaces>
+  <o:Lines>235</o:Lines>
+  <o:Paragraphs>66</o:Paragraphs>
+  <o:CharactersWithSpaces>33198</o:CharactersWithSpaces>
   <o:Version>11.9999</o:Version>
  </o:DocumentProperties>
 </xml><![endif]--><!--[if gte mso 9]><xml>
  <w:WordDocument>
   <w:Zoom>110</w:Zoom>
-  <w:SpellingState>Clean</w:SpellingState>
   <w:GrammarState>Clean</w:GrammarState>
   <w:PunctuationKerning/>
   <w:ValidateAgainstSchemas/>
@@ -95,9 +94,6 @@ p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
 	font-size:8.0pt;
 	font-family:Tahoma;
 	mso-fareast-font-family:"Times New Roman";}
-span.SpellE
-	{mso-style-name:"";
-	mso-spl-e:yes;}
 span.GramE
 	{mso-style-name:"";
 	mso-gram-e:yes;}
@@ -144,11 +140,89 @@ change log:<o:p></o:p></span></b></p>
 
 <p class=MsoPlainText><span style='font-family:"Times New Roman";color:blue;
 mso-bidi-font-weight:bold'>**Preview </span><span style='font-family:"Times New Roman"'>Build
+1240, assembly version 1.0.0.61 <o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:"Times New Roman"'><span
+style='mso-tab-count:1'>                </span>- play restore points are now
+shared with WMC (turned on by default)<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='text-indent:.5in'><span style='font-family:"Times New Roman"'>-
+<span class=GramE>standard</span> definition channels can be automatically
+filtered out of channel list (see HideStandardDefChannels)<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='text-indent:.5in'><span style='font-family:"Times New Roman"'>-
+<span class=GramE>added</span> ability to define multiple channel groups
+setting using xml, look for example in the new settings file.<span
+style='mso-spacerun:yes'>  </span>Here is an addition example with comments:<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in'><span style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'>&lt;XmlDefinedChannelGroups&gt;<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in'><span style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>   
+</span>&lt;XmlDefinedChannelGroup&gt;<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in'><span style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>     
+</span>&lt;Name&gt;My Channel Group&lt;/Name&gt;<span
+style='mso-spacerun:yes'>    </span>&lt;<span class=GramE>!--</span> the name
+of the channel group, using the name _MasterChannelGroup_ will filter all
+channels used in serverwmc --&gt;<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in'><span style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>     
+</span>&lt;IncludeChannelNumbers&gt;645, 700-800, 837,
+891&lt;/IncludeChannelNumbers<span class=GramE>&gt;<span
+style='mso-spacerun:yes'>  </span>&lt;</span>!-- the channels to include,
+leaving this blank will include all channels --&gt;<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in'><span style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>     
+</span>&lt;IncludeChannelCallSigns&gt;msNBC,
+CNN&lt;/IncludeChannelCallSigns&gt;<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in'><span style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>     
+</span>&lt;ExcludeChannelNumbers&gt;720-725, 715&lt;/ExcludeChannelNumbers&gt;<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in'><span style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>     
+</span>&lt;ExcludeChannelCallSigns&gt;TBNHD,
+FNCHD&lt;/ExcludeChannelCallSigns&gt;<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in'><span style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>     
+</span>&lt;HDOnly&gt;true&lt;/HDOnly<span class=GramE>&gt;<span
+style='mso-spacerun:yes'>  </span>&lt;</span>!-- include only channels flagged
+as HD --&gt;<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in'><span style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>     
+</span>&lt;SDOnly&gt;false&lt;/SDOnly<span class=GramE>&gt;<span
+style='mso-spacerun:yes'>  </span>&lt;</span>!-- include only channels that are
+SD --&gt;<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in'><span style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>     
+</span>&lt;IncludeTheseLanguagesOnly&gt;en,
+es-u&lt;/IncludeTheseLanguagesOnly&gt; &lt;<span class=GramE>!--</span> include
+shannels that have programming in these languages --&gt;<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in'><span style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>    </span>&lt;/XmlDefinedChannelGroup&gt;<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in'><span style='font-family:"Times New Roman";
+mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'> 
+</span>&lt;/XmlDefinedChannelGroups&gt;<b><o:p></o:p></b></span></p>
+
+<p class=MsoPlainText><b><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoPlainText><span style='font-family:"Times New Roman";color:blue;
+mso-bidi-font-weight:bold'>**Preview </span><span style='font-family:"Times New Roman"'>Build
 1239, assembly version 1.0.0.61 <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='text-indent:.5in'><span style='font-family:"Times New Roman"'>-Attempts
-reopen <span class=SpellE>wmc</span> database if database exceptions are thrown
-when used with epg123<o:p></o:p></span></p>
+reopen wmc database if database exceptions are thrown when used with epg123<o:p></o:p></span></p>
 
 <p class=MsoPlainText><b><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></p>
 
@@ -157,16 +231,16 @@ mso-bidi-font-weight:bold'>**Preview </span><span style='font-family:"Times New 
 1238, assembly version 1.0.0.61 <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='text-indent:.5in'><span style='font-family:"Times New Roman"'>-Fixed
-media stream codec bug with audio channels (<span class=SpellE>Emby</span>)<o:p></o:p></span></p>
+media stream codec bug with audio channels (Emby)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='text-indent:.5in'><span style='font-family:"Times New Roman"'>-Audio
-streams now prioritized by preferred language (<span class=SpellE>Emby</span>)<o:p></o:p></span></p>
+streams now prioritized by preferred language (Emby)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='text-indent:.5in'><span style='font-family:"Times New Roman"'>-Audio
-language is now returned as media stream info to <span class=SpellE>Emby</span><o:p></o:p></span></p>
+language is now returned as media stream info to Emby<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='text-indent:.5in'><span style='font-family:"Times New Roman"'>-GUI
-changed for preferred live <span class=SpellE>tv</span> language<o:p></o:p></span></p>
+changed for preferred live tv language<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='text-indent:.5in'><span style='font-family:"Times New Roman"'>-If
 live streams with monotonic PTS are detected DTS is not generated (on by
@@ -189,88 +263,79 @@ style='color:blue;mso-bidi-font-weight:bold'><o:p></o:p></span></span></p>
 assembly version 1.0.0.61 <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed a bug in the <span class=SpellE>remuxer</span>
-that caused small packets to not be transmitted correctly.&nbsp; Applies to
-both mpeg2 and h.264, but the problem was only reported on some h.264
-broadcasts.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed a bug in the remuxer that caused
+small packets to not be transmitted correctly.&nbsp; Applies to both mpeg2 and
+h.264, but the problem was only reported on some h.264 broadcasts.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>The <span class=SpellE>remux</span> now
-generates a monotonic DTS in the transport stream files it produces.&nbsp;
-Enabled by default for broadcasts in h.264.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>The remux now generates a monotonic DTS
+in the transport stream files it produces.&nbsp; Enabled by default for
+broadcasts in h.264.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='text-indent:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Fixed bug that caused <span class=SpellE>remuxed</span> (.<span class=SpellE>ts</span>)
-files to sometimes not be deleted when using http streaming.<o:p></o:p></span></p>
+Fixed bug that caused remuxed (.ts) files to sometimes not be deleted when
+using http streaming.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed a bug that caused series deletion
-to fail in <span class=SpellE>Kodi</span> versions less than Kodi16.<o:p></o:p></span></p>
+to fail in Kodi versions less than Kodi16.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed bug that cause deleted recordings
 to continue to show up in recording list (zombie&nbsp; recordings) <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Responding to <span class=SpellE>DeleteRecording</span>
-command from clients can now be disabled (see Recordings tab)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Responding to DeleteRecording command
+from clients can now be disabled (see Recordings tab)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Added option to ALWAYS <span
-class=SpellE>prepend</span> the original air date to the program description
-(disabled by default) (<span class=SpellE>Kodi</span> only).<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Added option to ALWAYS prepend the
+original air date to the program description (disabled by default) (Kodi only).<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.75in'><span style='font-family:"Times New Roman"'>-
-Set <span class=SpellE><i>AddOrigAirDateToDescriptionAlways</i></span> to true
-in settings file<o:p></o:p></span></p>
+Set <i>AddOrigAirDateToDescriptionAlways</i> to true in settings file<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Added option to substitute the original
-air date for the recorded date on all recordings (<span class=SpellE>Kodi</span>
-only) <o:p></o:p></span></p>
+air date for the recorded date on all recordings (Kodi only) <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.75in'><span style='font-family:"Times New Roman"'>-
-Set <span class=SpellE><i>UseOrigAirDateAsRecordingDate</i></span> to true in
-settings file<o:p></o:p></span></p>
+Set <i>UseOrigAirDateAsRecordingDate</i> to true in settings file<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-class=SpellE><span style='font-family:"Times New Roman"'>ClientRestriction</span></span><span
-style='font-family:"Times New Roman"'> is expanded to allow a DLNA device/tuner
-to be assigned to a client, this allows you to enable <span class=SpellE>dlna</span>
+style='font-family:"Times New Roman"'>ClientRestriction is expanded to allow a
+DLNA device/tuner to be assigned to a client, this allows you to enable dlna
 mode for specified clients.&nbsp; Also allows a single tuner to be assigned to
 that client.&nbsp; Example:<o:p></o:p></span></p>
 
-<p class=MsoPlainText style='margin-left:.75in'><span style='font-family:"Times New Roman"'>&lt;<span
-class=SpellE>ClientRestriction</span>&gt;<o:p></o:p></span></p>
+<p class=MsoPlainText style='margin-left:.75in'><span style='font-family:"Times New Roman"'>&lt;ClientRestriction&gt;<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.75in'><span style='font-family:"Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&lt;Client&gt;<span class=SpellE>Kodi^MachineName</span>&lt;/Client&gt;<o:p></o:p></span></p>
+&lt;Client&gt;Kodi^MachineName&lt;/Client&gt;<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.75in'><span style='font-family:"Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&lt;<span class=SpellE>RestrictDLNA</span>&gt;true&lt;/<span class=SpellE>RestrictDLNA</span>&gt;&nbsp;&nbsp;&nbsp;&nbsp;
-&lt;<span class=GramE>!--</span>&nbsp;&nbsp; restrict this client to DLNA
---&gt;<o:p></o:p></span></p>
+&lt;RestrictDLNA&gt;true&lt;/RestrictDLNA&gt;&nbsp;&nbsp;&nbsp;&nbsp; &lt;<span
+class=GramE>!--</span>&nbsp;&nbsp; restrict this client to DLNA --&gt;<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.75in'><span style='font-family:"Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&lt;<span class=SpellE>DLNA_Tuner</span>&gt;tuner2&lt;/<span class=SpellE>DLNA_Tuner</span>&gt;<span
-class=GramE>&nbsp; &lt;</span>!--&nbsp;&nbsp; assign tuner 2 in device to this
-client (default: auto) --&gt;<o:p></o:p></span></p>
+&lt;DLNA_Tuner&gt;tuner2&lt;/DLNA_Tuner&gt;<span class=GramE>&nbsp; &lt;</span>!--&nbsp;&nbsp;
+assign tuner 2 in device to this client (default: auto) --&gt;<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.75in'><span style='font-family:"Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&lt;<span class=SpellE>DLNA_DeviceIP</span>&gt;192.168.1.222&lt;/<span
-class=SpellE>DLNA_DeviceIP</span>&gt;&nbsp;&nbsp; &lt;<span class=GramE>!--</span>&nbsp;&nbsp;
-assign this device IP to this client (default: empty string)--&gt;<o:p></o:p></span></p>
+&lt;DLNA_DeviceIP&gt;192.168.1.222&lt;/DLNA_DeviceIP&gt;&nbsp;&nbsp; &lt;<span
+class=GramE>!--</span>&nbsp;&nbsp; assign this device IP to this client
+(default: empty string)--&gt;<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>&nbsp;&nbsp;&lt;/<span class=SpellE>ClientRestriction</span>&gt;<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>&nbsp;&nbsp;&lt;/ClientRestriction&gt;<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed region dependent exception on tuner
 status<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Stops stream if live stream <span
-class=SpellE>url</span> was not opened by client <o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Stops stream if live stream url was not
+opened by client <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Cleaned up formatting for when Epg123
@@ -281,8 +346,8 @@ style='font-family:"Times New Roman"'>Changed the default client inactive
 period to 20 min from 10 min<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed bug that caused <span class=SpellE>plex</span>
-to only play one stream at a time<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed bug that caused plex to only play
+one stream at a time<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Series timers that have no upcoming
@@ -290,21 +355,19 @@ episodes are now given a user settable date (enabled by default, default date
 is 12/31/2099)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed parsing bug with images <span
-class=SpellE>urls</span> (effects EPG123 users using <span class=SpellE>SchedulesDirect</span>
-for guide data)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed parsing bug with images urls
+(effects EPG123 users using SchedulesDirect for guide data)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed bug with live-<span class=SpellE>tv</span>
-<span class=SpellE>dlna</span> mode (<span class=SpellE>Emby</span>)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed bug with live-tv dlna mode (Emby)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Added support for <span class=SpellE>timeshift</span>
-buffer display for Kodi17-Krypton<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Added support for timeshift buffer
+display for Kodi17-Krypton<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed bug with the reporting Joint Stereo
-channels (<span class=SpellE>Emby</span>) <o:p></o:p></span></p>
+channels (Emby) <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>A tuner auto-reset was added in an
@@ -323,22 +386,21 @@ style='font-family:"Times New Roman"'>- Creation of repeating guide and manual
 based Timers<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:.5in'><span
-style='font-family:"Times New Roman"'>- Creation of <span class=SpellE>wishlist</span>
-timers<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>- Creation of wishlist timers<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:.5in'><span
 style='font-family:"Times New Roman"'>- All timers are can be edited &amp;
-deleted via <span class=SpellE>Kodi</span><o:p></o:p></span></p>
+deleted via Kodi<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:.5in'><span
-style='font-family:"Times New Roman"'>- Change <span class=SpellE><span
-class=GramE>gui</span></span> to better reflect kodi16
+style='font-family:"Times New Roman"'>- Change <span class=GramE>gui</span> to
+better reflect kodi16
 changes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='text-indent:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Auto update can now be set to download ‘Stable’ or ‘Preview’ versions of <span
-class=SpellE>serverwmc</span><o:p></o:p></span></p>
+Auto update can now be set to download ‘Stable’ or ‘Preview’ versions of
+serverwmc<o:p></o:p></span></p>
 
 <p class=MsoPlainText><span style='font-family:"Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 -&nbsp; Preview will be used to roll out new features and bug fixes as they are
@@ -349,7 +411,7 @@ implemented, but may not be as stable.<o:p></o:p></span></p>
 releases when they eventually come out.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='text-indent:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Supports <span class=SpellE>GameEx</span> clients <o:p></o:p></span></p>
+Supports GameEx clients <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='text-indent:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Recordings and Timers now cached per client to improve responsiveness (enabled
@@ -362,27 +424,23 @@ Client requests to delete recordings much faster.<o:p></o:p></span></p>
 Protection from mass deletion of recordings by client (enabled by default)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='text-indent:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span class=SpellE>Remux</span> now works with <span class=SpellE>wtv</span>
-files created by <span class=SpellE>ffmpeg</span> (<span class=SpellE>mcebuddy</span>,
-etc)<o:p></o:p></span></p>
+Remux now works with wtv files created by ffmpeg (mcebuddy, etc)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='text-indent:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Enables <span class=SpellE>emby</span> to use http for live streaming and file
-paths for recorded <span class=SpellE><span class=GramE>tv</span></span> (<span
-class=SpellE>Emby</span>)<o:p></o:p></span></p>
+Enables emby to use http for live streaming and file paths for recorded <span
+class=GramE>tv</span> (Emby)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='text-indent:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Reads Recording metadata directly from file for missing items (disabled by
-default, enable by setting <span class=SpellE>UseMetaDataForRecordings</span>
-to true)<o:p></o:p></span></p>
+default, enable by setting UseMetaDataForRecordings to true)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='text-indent:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Original air date for a repeat programs, and movie release year, are now added
-to descriptions (enabled by default - <span class=SpellE>kodi</span> only)<o:p></o:p></span></p>
+to descriptions (enabled by default - kodi only)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-If http service is enabled, <span class=SpellE>ServerWMC</span> status can now
-be returned in JSON format (see ‘Http Service’ tab)<o:p></o:p></span></p>
+If http service is enabled, ServerWMC status can now be returned in JSON format
+(see ‘Http Service’ tab)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 List of programs to <u>never</u> primetime record is now read from an external
@@ -399,42 +457,37 @@ style='font-family:"Times New Roman"'>- <span class=GramE>wildcards</span> (*)
 are supported<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.75in;text-indent:.25in'><span
-style='font-family:"Times New Roman"'>- set <span class=SpellE>PrimeTimeBlacklistFullPath</span>
-(in <span class=SpellE>config</span> file) to specify the full path name of the
-text file.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>- set PrimeTimeBlacklistFullPath (in
+config file) to specify the full path name of the text file.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 New genre codes added to master genre table.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Genre code table values can now be overridden by user (edit: %<span
-class=SpellE>programdata%\vdsoftware\serverwmc\GenreDict.xml</span> (<span
-class=SpellE>kodi</span>)<o:p></o:p></span></p>
+Genre code table values can now be overridden by user (edit:
+%programdata%\vdsoftware\serverwmc\GenreDict.xml (kodi)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Does more thorough search for live-<span class=SpellE>tv</span> data before
-giving up on a live stream<o:p></o:p></span></p>
+Does more thorough search for live-tv data before giving up on a live stream<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Poster artwork generated by <span class=SpellE>Emby</span> is now deleted when
-windows deletes a recording<o:p></o:p></span></p>
+Poster artwork generated by Emby is now deleted when windows deletes a
+recording<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.75in;text-indent:.25in'><span
 style='font-family:"Times New Roman"'>- enable by adding ‘jpg’ extension to
-auto removal extensions (see Recordings tab) (<span class=SpellE>Emby</span>)<o:p></o:p></span></p>
+auto removal extensions (see Recordings tab) (Emby)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Added option to display Premiere and Finale in EPG for <span class=SpellE>Kodi</span>
-clients (strings are editable in settings) (<span class=SpellE>Kodi</span>)<o:p></o:p></span></p>
+Added option to display Premiere and Finale in EPG for Kodi clients (strings
+are editable in settings) (Kodi)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span class=SpellE>IsFinale</span> flag is now sent to <span class=SpellE>Emby</span>
-clients (<span class=SpellE>Emby</span>)<o:p></o:p></span></p>
+IsFinale flag is now sent to Emby clients (Emby)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Warning message is now displayed if http service is not being used for video
-streaming for non-<span class=SpellE>dlna</span> clients (<span class=SpellE>Emby</span>)
-<o:p></o:p></span></p>
+streaming for non-dlna clients (Emby) <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='text-indent:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Added option to use channel name as the channel ID. <o:p></o:p></span></p>
@@ -451,15 +504,15 @@ Fixed bug that caused instant recording to fail depending on the program title<o
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Fixed bug with recording delete that cause delete state to be returned
-incorrectly (<span class=SpellE>Plex</span> only)<o:p></o:p></span></p>
+incorrectly (Plex only)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Fixed bug with encoding errors for non-English guide data using string
-normalization (thanks <span class=SpellE>vasil</span>)<o:p></o:p></span></p>
+normalization (thanks vasil)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Fixed bug that could cause client <span class=SpellE><span class=GramE>gui</span></span>
-updates to not be sent to all frontends (<span class=SpellE>kodi</span>)<o:p></o:p></span></p>
+Fixed bug that could cause client <span class=GramE>gui</span> updates to not
+be sent to all frontends (kodi)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Fixed bug that caused timer setting to fail if recording day did not match
@@ -474,20 +527,19 @@ dropped abruptly<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Fixed bug that caused recordings from a series timer from being grouped with
-primetime recordings (<span class=SpellE>Kodi</span>)<o:p></o:p></span></p>
+primetime recordings (Kodi)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Fixed bug in version 1190 that caused timer padding to not be used in new
-timers if user chose <span class=SpellE>serverwmc</span> padding option.<o:p></o:p></span></p>
+timers if user chose serverwmc padding option.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Fixed bug that caused one week <span class=SpellE>KeepLengths</span> to never
-be deleted by the <span class=SpellE>wmc</span> file delete service (applies to
-primetime recordings and Jarvis) <o:p></o:p></span></p>
+Fixed bug that caused one week KeepLengths to never be deleted by the wmc file
+delete service (applies to primetime recordings and Jarvis) <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Fixed bug in installer that caused it to not recognize win10 based <span
-class=SpellE>dlls</span> (still needs to be tested)<o:p></o:p></span></p>
+Fixed bug in installer that caused it to not recognize win10 based dlls (still
+needs to be tested)<o:p></o:p></span></p>
 
 <p class=MsoPlainText><b><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></p>
 
@@ -497,20 +549,19 @@ class=SpellE>dlls</span> (still needs to be tested)<o:p></o:p></span></p>
 assembly version 1.0.0.58 <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Supports tuner based <span class=SpellE>transcoding</span>
-settable by <span class=SpellE>Emby</span> server running in DLNA mode.&nbsp; (<span
-class=SpellE>Emby</span> only)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Supports tuner based transcoding settable
+by Emby server running in DLNA mode.&nbsp; (Emby only)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Implemented <span class=SpellE>PrimeTimeRecording</span>
-feature, allowing for the automatic recording all shows on a specified channel
-in specific time window.&nbsp; Requires editing of the settings file, entry
+style='font-family:"Times New Roman"'>Implemented PrimeTimeRecording feature,
+allowing for the automatic recording all shows on a specified channel in
+specific time window.&nbsp; Requires editing of the settings file, entry
 examples are provided.&nbsp; Feature includes:<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Auto recordings can be set to multiple
-days of the week for each <span class=SpellE>PrimeTimeRecording</span>
-specified, including: weekend, weekdays, or all<o:p></o:p></span></p>
+days of the week for each PrimeTimeRecording specified, including: weekend,
+weekdays, or all<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>The types of shows auto recorded can be
@@ -518,13 +569,12 @@ specified, for example <span class=GramE>New</span> (non-repeat) episodes or
 sporting events. <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Specific show titles can be added to a ‘<span
-class=SpellE>NeverRecordShows</span>’ list for exclusion from auto recording<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Specific show titles can be added to a ‘NeverRecordShows’
+list for exclusion from auto recording<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Shows can be optionally grouped by the <span
-class=SpellE>PrimeTimeRecording</span> ‘Name’ in the recording list&nbsp; (<span
-class=SpellE>Kodi</span> only) <o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Shows can be optionally grouped by the
+PrimeTimeRecording ‘Name’ in the recording list&nbsp; (Kodi only) <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>End times can occur after midnight (i.e.
@@ -532,19 +582,18 @@ the next day)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>The length of time to keep the recording
-file can be optionally set (otherwise default <span class=SpellE>wmc</span>
-keep length is used)<o:p></o:p></span></p>
+file can be optionally set (otherwise default wmc keep length is used)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Actors, Writers and Directors metadata
-info is now transmitted to clients that support it (<span class=SpellE>Kodi-Isengard</span>)<o:p></o:p></span></p>
+info is now transmitted to clients that support it (Kodi-Isengard)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed tuner display bug.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Tuner tab display revamped, for example it
-now displays the current channel a tuner is set to<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Tuner tab display revamped, for example
+it now displays the current channel a tuner is set to<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Null tuning spaces are no longer treated
@@ -555,11 +604,10 @@ style='font-family:"Times New Roman"'>Fixed framework start up bug that happens
 on some windows systems after a reboot.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Old version of settings file (<span
-class=SpellE>config.xml</span>) is now automatically saved if it contains an
-xml syntax error.&nbsp; It is saved in the same directory and is named <span
-class=SpellE>config-errors.xml</span>.&nbsp; This gives the user the chance to
-correct the error and not lose their settings.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Old version of settings file (config.xml)
+is now automatically saved if it contains an xml syntax error.&nbsp; It is
+saved in the same directory and is named config-errors.xml.&nbsp; This gives
+the user the chance to correct the error and not lose their settings.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Orphaned streams that run past the
@@ -568,11 +616,10 @@ maximum runtime are now closed and purged properly.<o:p></o:p></span></p>
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>IP address for http service can be
 optionally hardwired in settings.&nbsp; Useful for systems that contain
-multiple <span class=SpellE>nics</span>.<o:p></o:p></span></p>
+multiple nics.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Supports renaming of <span class=SpellE>Mediabrowser</span>
-to <span class=SpellE>Emby</span><o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Supports renaming of Mediabrowser to Emby<o:p></o:p></span></p>
 
 <p class=MsoPlainText><b><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></p>
 
@@ -584,49 +631,43 @@ style='font-family:"Times New Roman"'>Http service now available (some of&nbsp;
 these features are still experimental)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Enables <span class=SpellE>Plex</span>
-clients to use <span class=SpellE>swmc</span> via <span class=SpellE>Salphonso’s</span>
-<span class=SpellE>plex</span> channel<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Enables Plex clients to use swmc via Salphonso’s
+plex channel<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Added Http Service tab<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Live <span class=SpellE>tv</span> and
-recordings can now be started by external players like VLC using <span
-class=SpellE>urls</span> over a network<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Live tv and recordings can now be started
+by external players like VLC using urls over a network<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Http service provides a ‘Status’ web page
-for checking <span class=SpellE>serverwmc</span> using a browser on any client<o:p></o:p></span></p>
+for checking serverwmc using a browser on any client<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Enables <span class=SpellE>Kodi</span>
-and MBS to use URLs for live and recorded <span class=SpellE>tv</span> streams
-rather than network shares (experimental for now)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Enables Kodi and MBS to use URLs for live
+and recorded tv streams rather than network shares (experimental for now)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-class=SpellE><span style='font-family:"Times New Roman"'>Dlna</span></span><span
-style='font-family:"Times New Roman"'> changes:<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Dlna changes:<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
-class=SpellE><span style='font-family:"Times New Roman"'>Dlna</span></span><span
-style='font-family:"Times New Roman"'> mode can be set from ‘Live TV’ tab for
-each client type.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Dlna mode can be set from ‘Live TV’ tab
+for each client type.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Primary channel numbers now used in <span
-class=SpellE>dlna</span> addressing (with an option to revert to device
-numbers)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Primary channel numbers now used in dlna
+addressing (with an option to revert to device numbers)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Option added to remap channel numbers in <span
-class=SpellE>dlna</span> mode.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Option added to remap channel numbers in
+dlna mode.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Individual channels can have <span
-class=SpellE>dlna</span> mode disabled (forcing them to use <span class=SpellE>Remux</span>
-instead) by remapping them to channel number: 0<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Individual channels can have dlna mode
+disabled (forcing them to use Remux instead) by remapping them to channel
+number: 0<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>For external actions: A valid file path
@@ -638,34 +679,30 @@ style='font-family:"Times New Roman"'>Added option that runs external actions
 without creating a window (i.e. silent mode, turned off by default)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Live <span class=SpellE>tv</span> timeout
-errors are now recoverable if enough stream data has been found when timeout
-occurs<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Live tv timeout errors are now
+recoverable if enough stream data has been found when timeout occurs<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-class=SpellE><span style='font-family:"Times New Roman"'>Remux</span></span><span
-style='font-family:"Times New Roman"'> returns faster if channel is marked as
-forced radio, regardless of whether there is a video stream<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Remux returns faster if channel is marked
+as forced radio, regardless of whether there is a video stream<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Live-<span class=SpellE>tv</span> and
-active-<span class=SpellE>rec</span> <span class=SpellE>remux</span> can now
-handle stream ID redefinitions on-the-fly (solves a rare but fatal live-<span
-class=SpellE>tv</span> crash)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Live-tv and active-rec remux can now
+handle stream ID redefinitions on-the-fly (solves a rare but fatal live-tv
+crash)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Metadata files generated for <span
-class=SpellE>wtv</span> files by external programs can now be cleaned up
-(deleted) if no matching <span class=SpellE>wtv</span> file is found.&nbsp; See
-‘Recordings’ tab in <span class=SpellE><span class=GramE>gui</span></span>.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Metadata files generated for wtv files by
+external programs can now be cleaned up (deleted) if no matching wtv file is
+found.&nbsp; See ‘Recordings’ tab in <span class=GramE>gui</span>.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>More reliable DRM detection for <span
-class=SpellE>HDHomeRun</span> devices<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>More reliable DRM detection for HDHomeRun
+devices<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed bug that caused <span class=SpellE>SocketServer</span>
-to hang if connection was dropped while the connection was being accepted.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed bug that caused SocketServer to
+hang if connection was dropped while the connection was being accepted.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed bug with identifying watched folder
@@ -676,8 +713,8 @@ style='font-family:"Times New Roman"'>Fixed alignment bug when hiding passwords
 with asterisks in log file<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed miscellaneous bugs in <span
-class=SpellE>RunAsService</span> mode<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed miscellaneous bugs in RunAsService
+mode<o:p></o:p></span></p>
 
 <p class=MsoPlainText><b><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></p>
 
@@ -685,8 +722,8 @@ class=SpellE>RunAsService</span> mode<o:p></o:p></span></p>
 assembly version 1.0.0.52 <b><o:p></o:p></b></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed a bug that could cause a <span
-class=SpellE>remux</span> crash in rare circumstances<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed a bug that could cause a remux
+crash in rare circumstances<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed a bug that caused disk drive space
@@ -705,8 +742,7 @@ style='font-family:"Times New Roman"'>Reverted default setting to not filter
 merged channels<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>GUI updated to be ‘<span class=SpellE>Kodi</span>’
-instead of <span class=SpellE>xbmc</span><o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>GUI updated to be ‘Kodi’ instead of xbmc<o:p></o:p></span></p>
 
 <p class=MsoPlainText><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
@@ -715,20 +751,19 @@ assembly version 1.0.0.51 <b><o:p></o:p></b></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed bug that caused certain merged
-channel configurations to be incorrectly reported as <span class=SpellE>DRM’d</span><o:p></o:p></span></p>
+channel configurations to be incorrectly reported as DRM’d<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>WMC<span class=GramE>&nbsp; events</span>
-log can now be viewed in <span class=SpellE>swmc</span>,&nbsp; see the ‘Debug’
-tab.<o:p></o:p></span></p>
+log can now be viewed in swmc,&nbsp; see the ‘Debug’ tab.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Returns recorded <span class=SpellE>tv</span>
-drive space status (requires helix <span class=SpellE>pvr.wmc</span> 0.3.107)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Returns recorded tv drive space status
+(requires helix pvr.wmc 0.3.107)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Tuners streaming <span class=SpellE>dlna</span>
-channels can now be reset in tuners tab<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Tuners streaming dlna channels can now be
+reset in tuners tab<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>More detail on channel info is logged<o:p></o:p></span></p>
@@ -747,42 +782,38 @@ log files smaller for helix clients<o:p></o:p></span></p>
 assembly version 1.0.0.49 <b><o:p></o:p></b></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Supports <span class=SpellE>dlna</span>
-live-<span class=SpellE>tv</span> streams by default for <span class=SpellE>dlna</span>
-capable <span class=SpellE>HDHomerun</span> tuners (MBS only)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Supports dlna live-tv streams by default
+for dlna capable HDHomerun tuners (MBS only)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Turns off tuner based <span class=SpellE>transcoding</span>
-by default when using <span class=SpellE>dlna</span> addressing with MBS (<span
-class=SpellE>overridable</span> in settings)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Turns off tuner based transcoding by
+default when using dlna addressing with MBS (overridable in settings)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed bug that caused series editing to
-fail with some <span class=SpellE>tv</span> shows (MBS only)<o:p></o:p></span></p>
+fail with some tv shows (MBS only)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed bug that could cause <span
-class=SpellE>serverwmc</span> to incorrectly flag tuners as ‘disabled’<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed bug that could cause serverwmc to
+incorrectly flag tuners as ‘disabled’<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed bug that caused channels that aren’t
 producing data to be flagged as ‘busy’<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>When live-<span class=SpellE>tv</span>
-stream protection is enabled, <span class=SpellE>serverwmc</span> now selects only
-the matching channel number for live-<span class=SpellE>tv</span> streams in
-cases where channels with different numbers have been merged by <span
-class=SpellE>wmc</span><o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>When live-tv stream protection is
+enabled, serverwmc now selects only the matching channel number for live-tv
+streams in cases where channels with different numbers have been merged by wmc<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed uncaught exception in <span
-class=SpellE>SocketServer</span> that could crash <span class=SpellE>serverwmc</span>
-if client suddenly goes down during active communication<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed uncaught exception in SocketServer
+that could crash serverwmc if client suddenly goes down during active
+communication<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Name of default channel and program
-images are settable in <span class=SpellE>config</span><o:p></o:p></span></p>
+images are settable in config<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed bug that would flag local MBS
@@ -802,9 +833,8 @@ style='font-family:"Times New Roman"'>add support for triggering EPG refreshes
 (for helix client only)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-class=SpellE><span style='font-family:"Times New Roman"'>config</span></span><span
-style='font-family:"Times New Roman"'> settings to control whether to trigger
-stale clients to refresh data/EPG<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>config settings to control whether to
+trigger stale clients to refresh data/EPG<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>change update mechanism to support
@@ -819,16 +849,12 @@ style='font-family:"Times New Roman"'>allow for default channel and program
 images to be used when image is not found in database<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>For default channel icons, save image as ‘<span
-class=SpellE>default.jpg</span>’ and store in:&nbsp; …</span>\<span
-class=SpellE><span style='font-family:"Times New Roman"'>TempSWMC\imageCache\userChannelImages</span></span><span
-style='font-family:"Times New Roman"'><o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>For default channel icons, save image as ‘default.jpg’
+and store in:&nbsp; …</span>\<span style='font-family:"Times New Roman"'>TempSWMC\imageCache\userChannelImages<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>For default program images, save image as
-‘<span class=SpellE>default.jpg</span>’ and store in:&nbsp; …</span>\<span
-class=SpellE><span style='font-family:"Times New Roman"'>TempSWMC\imageCache\userProgramImages</span></span><span
-style='font-family:"Times New Roman"'><o:p></o:p></span></p>
+‘default.jpg’ and store in:&nbsp; …</span>\<span style='font-family:"Times New Roman"'>TempSWMC\imageCache\userProgramImages<o:p></o:p></span></p>
 
 <p class=MsoPlainText><b><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></p>
 
@@ -840,8 +866,8 @@ style='font-family:"Times New Roman"'>Fixed bug that caused all episode
 recording requests to be series requests.&nbsp; <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Changed user-agent field so <span
-class=SpellE>bitly</span> stats are updated properly.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Changed user-agent field so bitly stats
+are updated properly.<o:p></o:p></span></p>
 
 <p class=MsoPlainText><b><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></p>
 
@@ -850,25 +876,23 @@ assembly version 1.0.0.40 <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Implemented a solution to the long
-standing problem that caused live-<span class=SpellE>tv</span> playback to be
-stopped by recordings that start on the SAME channel, even though free tuners
-were available.&nbsp; Two types of live stream protection are implemented, with
-the most flexible one enabled by default.&nbsp; <o:p></o:p></span></p>
+standing problem that caused live-tv playback to be stopped by recordings that
+start on the SAME channel, even though free tuners were available.&nbsp; Two
+types of live stream protection are implemented, with the most flexible one
+enabled by default.&nbsp; <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Detect when a client has already been
-running when <span class=SpellE>serverwmc</span> is started, if detected
-trigger client to refresh <span class=GramE>it's</span> data after <span
-class=SpellE>serverwmc</span> is back online.<o:p></o:p></span></p>
+running when serverwmc is started, if detected trigger client to refresh <span
+class=GramE>it's</span> data after serverwmc is back online.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Tuner status tab now updated
 automatically as backend recording status changes.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Location of <span class=SpellE>Remux</span>
-folder can now be specified in the <span class=SpellE>config</span> file (see ‘<span
-class=SpellE>RemuxCustomFolderUNC</span>’ in <span class=SpellE>config.xml</span>).&nbsp;
+style='font-family:"Times New Roman"'>Location of Remux folder can now be
+specified in the config file (see ‘RemuxCustomFolderUNC’ in config.xml).&nbsp;
 Usage details:<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
@@ -877,30 +901,28 @@ location.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>This folder has to already exist and be
-specified with a UNC path in the <span class=SpellE>config</span> file, if not
-it will be ignored<o:p></o:p></span></p>
+specified with a UNC path in the config file, if not it will be ignored<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>This folder must be writeable by the
-account <span class=SpellE>serverwmc</span> is run under.<o:p></o:p></span></p>
+account serverwmc is run under.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Folder must be shared in order for remote
-clients to use it for playback of live-<span class=SpellE>tv</span> and
-actively recording streams.<o:p></o:p></span></p>
+clients to use it for playback of live-tv and actively recording streams.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed bug that caused self installer to fail
-if user names contains spaces.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed bug that caused self installer to
+fail if user names contains spaces.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed bug that sometimes caused the
-tuners listed on the Tuner tab to be incorrect.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed bug that sometimes caused the tuners
+listed on the Tuner tab to be incorrect.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed bug that would cause some <span
-class=SpellE>hdhr</span> tuners to not be query-able, causing their busy status
-to not be detected properly.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed bug that would cause some hdhr
+tuners to not be query-able, causing their busy status to not be detected
+properly.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Each daily log now contains configuration
@@ -913,12 +935,11 @@ assembly version 1.0.0.39 <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed a bug that stopped MBS from playing
-live <span class=SpellE><span class=GramE>tv</span></span> streams if
-credentials were turned on.<o:p></o:p></span></p>
+live <span class=GramE>tv</span> streams if credentials were turned on.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>No longer saves empty <span class=SpellE>wtv</span>
-files when debugging failed live-<span class=SpellE>tv</span> streams<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>No longer saves empty wtv files when
+debugging failed live-tv streams<o:p></o:p></span></p>
 
 <p class=MsoPlainText><b><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></p>
 
@@ -927,35 +948,31 @@ assembly version 1.0.0.38 <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed a bug that caused a disabled tuner
-driver to get consistently picked for live-<span class=SpellE>tv</span> on
-certain channels, depending on how <span class=SpellE>wmc</span> is
-configured.&nbsp; Fixes ‘no data found on this channel’ problem that happens on
-some systems.<o:p></o:p></span></p>
+driver to get consistently picked for live-tv on certain channels, depending on
+how wmc is configured.&nbsp; Fixes ‘no data found on this channel’ problem that
+happens on some systems.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Option added to never use local paths (fixes
-MBS ‘play to’ feature for <span class=SpellE>xbmc</span> with the </span><b><span
-lang=EN style='mso-ansi-language:EN'>XBMB3C</span></b><span lang=EN
-style='font-family:"Times New Roman";mso-ansi-language:EN'> </span><span
-class=SpellE><span style='font-family:"Times New Roman"'>addon</span></span><span
-style='font-family:"Times New Roman"'>)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Option added to never use local paths
+(fixes MBS ‘play to’ feature for xbmc with the </span><b><span lang=EN
+style='mso-ansi-language:EN'>XBMB3C</span></b><span lang=EN style='font-family:
+"Times New Roman";mso-ansi-language:EN'> </span><span style='font-family:"Times New Roman"'>addon)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Status of tuners is now displayed in a
-new ‘Tuner’ tab (tuner configuration is no longer shown in Live-TV tab)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Status of tuners is now displayed in a new
+‘Tuner’ tab (tuner configuration is no longer shown in Live-TV tab)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-class=SpellE><span style='font-family:"Times New Roman"'>HDHomeRun</span></span><span
-style='font-family:"Times New Roman"'> network tuner specific:<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>HDHomeRun network tuner specific:<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
-class=SpellE><span style='font-family:"Times New Roman"'>ServerWMC</span></span><span
-style='font-family:"Times New Roman"'> will no longer try to use tuners locked
-by other machines on the same network when it starts a live stream.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>ServerWMC will no longer try to use
+tuners locked by other machines on the same network when it starts a live
+stream.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>HDHR tuner lock can be reset (either in
-MBS live-<span class=SpellE>tv</span> view or the new Tuner status tab)<o:p></o:p></span></p>
+MBS live-tv view or the new Tuner status tab)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Multiple clients using the same name now
@@ -967,12 +984,12 @@ style='font-family:"Times New Roman"'>Added option to use IP address instead of
 machine name for remote clients<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-class=SpellE><span style='font-family:"Times New Roman"'>ClientRestrictions</span></span><span
-style='font-family:"Times New Roman"'> can be specified by IP address or client
-name <b>(use the IP address if multiple clients have the same name)</b><o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>ClientRestrictions can be specified by IP
+address or client name <b>(use the IP address if multiple clients have the same
+name)</b><o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Now handles multiple <span class=SpellE>MediaBrowser</span>-Server
+style='font-family:"Times New Roman"'>Now handles multiple MediaBrowser-Server
 clients (MBS only)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
@@ -988,42 +1005,37 @@ null tuning space is retrieved.<o:p></o:p></span></p>
 
 <p class=MsoPlainText><b><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></p>
 
-<p class=MsoPlainText><span style='font-family:"Times New Roman"'>Build 1154, assembly
-version 1.0.0.36 <o:p></o:p></span></p>
+<p class=MsoPlainText><span style='font-family:"Times New Roman"'>Build 1154,
+assembly version 1.0.0.36 <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Logger revamped so that a new log is
-create each day and log files older than seven days are discarded
-(configurable).<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Logger revamped so that a new log is create
+each day and log files older than seven days are discarded (configurable).<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Recordings ‘Watched’ state now sent to
-client (currently <span class=SpellE>xbmc</span> only, requires 0.2.98 <span
-class=SpellE>pvr.wmc</span>)<o:p></o:p></span></p>
+client (currently xbmc only, requires 0.2.98 pvr.wmc)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Wake-on-LAN (WOL) now supported - <span
-class=SpellE>pvr.wmc</span> <span class=SpellE>addon</span> at <span
-class=SpellE>xbmc</span> startup will now wake a sleeping server computer. (<span
-class=GramE>requires</span> bios support, <span class=SpellE>xbmc</span> only,
-requires 0.2.98 <span class=SpellE>pvr.wmc</span>).&nbsp; <o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Wake-on-LAN (WOL) now supported - pvr.wmc
+addon at xbmc startup will now wake a sleeping server computer. (<span
+class=GramE>requires</span> bios support, xbmc only, requires 0.2.98
+pvr.wmc).&nbsp; <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>All client commands how handled in
 separate threads.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed memory leak when multiple <span
-class=SpellE>pvr.wmc</span> <span class=SpellE>addons</span> are enabled in <span
-class=SpellE>xbmc</span><o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed memory leak when multiple pvr.wmc
+addons are enabled in xbmc<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Added ‘<span class=SpellE>changelog</span>’
-link to update tab.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Added ‘changelog’ link to update tab.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Disk-full errors are caught and handled
-in <span class=SpellE>Remux</span> <o:p></o:p></span></p>
+in Remux <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed bug that caused double counting of
@@ -1031,8 +1043,7 @@ radio tuners in some systems<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Time synchronization now checked between
-client and server to catch EPG related errors (<span class=SpellE>xbmc</span>,
-requires 0.2.98 <span class=SpellE>pvr.wmc</span>)<o:p></o:p></span></p>
+client and server to catch EPG related errors (xbmc, requires 0.2.98 pvr.wmc)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>No longer using ‘DEBUG’ configuration in
@@ -1049,43 +1060,39 @@ capabilities, also update notifications (see new Update tab)<o:p></o:p></span></
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Added FM radio capabilities if radio
-tuner is configured in <span class=SpellE>wmc</span>.&nbsp; Imports channel
-presets from <span class=SpellE>wmc</span> or from <span class=SpellE>config.xml</span>
-(<span class=SpellE>xbmc</span>)<o:p></o:p></span></p>
+tuner is configured in wmc.&nbsp; Imports channel presets from wmc or from
+config.xml (xbmc)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>All stream and health checks are
-performed in a separate thread from server commands, so that live-<span
-class=SpellE>tv</span> streams are no longer frozen when another client’s commands
-have a long execution time.<o:p></o:p></span></p>
+performed in a separate thread from server commands, so that live-tv streams
+are no longer frozen when another client’s commands have a long execution time.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-class=SpellE><span style='font-family:"Times New Roman"'>GetRecordings</span></span><span
-style='font-family:"Times New Roman"'> execution time decreased.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>GetRecordings execution time decreased.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Socket server is now fully asynchronous <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed bug with watched folder not using <span
-class=SpellE>smb</span> paths - again (<span class=SpellE>xbmc</span>) <o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed bug with watched folder not using
+smb paths - again (xbmc) <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Server can now post general and
-update-available popup messages to client (<span class=SpellE>xbmc</span>)<o:p></o:p></span></p>
+update-available popup messages to client (xbmc)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Bit rates of audio and video streams are
-now calculated on the fly during <span class=SpellE>remux</span> (mb3)<o:p></o:p></span></p>
+now calculated on the fly during remux (mb3)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-class=SpellE><span style='font-family:"Times New Roman"'>Mediastream</span></span><span
-style='font-family:"Times New Roman"'> info now returns nulls for values that
-aren’t determined during <span class=SpellE>remux</span> (mb3) <o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Mediastream info now returns nulls for
+values that aren’t determined during remux (mb3) <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed bug with <span class=SpellE>gui</span>
-checkbox not binding to primetime recording enable<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed bug with gui checkbox not binding
+to primetime recording enable<o:p></o:p></span></p>
 
 <p class=MsoPlainText><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
@@ -1111,12 +1118,11 @@ overridden<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed bug where shared directories were
-not showing up when <span class=SpellE>xbmc-gotham</span> was running on server
-machine<o:p></o:p></span></p>
+not showing up when xbmc-gotham was running on server machine<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed bug when bad recording <span
-class=SpellE>runtype</span> was found in registry<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed bug when bad recording runtype was
+found in registry<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Stream sequence indexes now returned to
@@ -1133,46 +1139,45 @@ assembly version 1.0.0.29 <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>TV channels can now be designated to show
-up as radio channels, having their video streams ignored (<span class=SpellE>xbmc</span>)<o:p></o:p></span></p>
+up as radio channels, having their video streams ignored (xbmc)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.75in'><i><span style='font-family:
 "Times New Roman"'>Set forced radio channel numbers and number ranges in<span
-class=GramE>&nbsp; string</span>: <span class=SpellE><b>ForcedRadioChannels</b></span>,
-separating values with commas<o:p></o:p></span></i></p>
+class=GramE>&nbsp; string</span>: <b>ForcedRadioChannels</b>, separating values
+with commas<o:p></o:p></span></i></p>
 
 <p class=MsoPlainText style='margin-left:.75in'><span class=GramE><i><span
 style='font-family:"Times New Roman"'>example</span></i></span><i><span
-style='font-family:"Times New Roman"'>:&nbsp;&nbsp; &lt;<span class=SpellE>ForcedRadioChannels</span>&gt;3-4.2,
-6&lt;/<span class=SpellE>ForcedRadioChannels</span>&gt;&nbsp;&nbsp; (set
-channels between 3 and 4.2 (inclusive) and channel 6 as radio)</span></i><span
+style='font-family:"Times New Roman"'>:&nbsp;&nbsp;
+&lt;ForcedRadioChannels&gt;3-4.2, 6&lt;/ForcedRadioChannels&gt;&nbsp;&nbsp;
+(set channels between 3 and 4.2 (inclusive) and channel 6 as radio)</span></i><span
 style='font-family:"Times New Roman"'><o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Channels without EPG data are now
-viewable, watchable and recordable in guide (<span class=SpellE>xbmc</span>).<o:p></o:p></span></p>
+viewable, watchable and recordable in guide (xbmc).<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed bug so that <span class=SpellE>smb</span>
-paths to watched folders are now used for windows clients (<span class=SpellE>xbmc</span>).<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed bug so that smb paths to watched
+folders are now used for windows clients (xbmc).<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>New <span class=SpellE>config</span>
-setting to route playback of all recorded <span class=SpellE><span class=GramE>tv</span></span>
-files through <span class=SpellE>serverwmc</span> (not enabled by default) (<span
-class=SpellE>xbmc</span>).&nbsp; <o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>New config setting to route playback of
+all recorded <span class=GramE>tv</span> files through serverwmc (not enabled
+by default) (xbmc).&nbsp; <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.75in;text-indent:.25in'><i><span
-style='font-family:"Times New Roman"'>Set <span class=SpellE><b>Debug_RequestAllRecordings</b></span>
-to ‘true’ <o:p></o:p></span></i></p>
+style='font-family:"Times New Roman"'>Set <b>Debug_RequestAllRecordings</b> to ‘true’
+<o:p></o:p></span></i></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Media stream <span class=SpellE>remux</span>
-info returned to <span class=SpellE>Mediabrowser</span> clients<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Media stream remux info returned to
+Mediabrowser clients<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Number of recorded episodes in a series
-now appended to series directory name in display list (enable by default) (<span
-class=SpellE>xbmc</span>)<o:p></o:p></span></p>
+now appended to series directory name in display list (enable by default)
+(xbmc)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Credentials now checked for illegal path
@@ -1190,102 +1195,96 @@ assembly version 1.0.0.28 <o:p></o:p></span></p>
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Watching active-recordings now displays
 the correction play time, improving FF, RW and skip performance (requires 2.94
-or higher of <span class=SpellE>pvr.wmc</span>) (<span class=SpellE><b>gotham</b></span>
-only)<o:p></o:p></span></p>
+or higher of pvr.wmc) (<b>gotham</b> only)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Channels and recordings transferred to
 designated clients can now be filtered to only receive a certain channel group,
-requires editing of <span class=SpellE>config</span> file <o:p></o:p></span></p>
+requires editing of config file <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>By default, multiple clients viewing same
-live-<span class=SpellE>tv</span> channel now get their own <span class=SpellE>ts</span>
-stream (more consistent start time with better <span class=SpellE>FF,RW,Skip</span>)<o:p></o:p></span></p>
+live-tv channel now get their own ts stream (more consistent start time with
+better FF,RW,Skip)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>By default when an active-recording is
-viewed, the <span class=SpellE>remux</span> now keeps going until the recording
-finishes, making last view position <span class=SpellE>resumable</span>.<o:p></o:p></span></p>
+viewed, the remux now keeps going until the recording finishes, making last
+view position resumable.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Audio-only <span class=SpellE>Tv</span>
-channels now detected and <span class=SpellE>remuxed</span> more efficiently<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Audio-only Tv channels now detected and
+remuxed more efficiently<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Audio-only <span class=SpellE>Tv</span> channels
-can now be displayed in the ‘radio’ section of <span class=SpellE>xbmc</span>
-(requires .94 or higher of <span class=SpellE>pvr.wmc</span>)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Audio-only Tv channels can now be
+displayed in the ‘radio’ section of xbmc (requires .94 or higher of pvr.wmc)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Channels that have no <span class=SpellE>epg</span>
-entries can now be recorded (recording duration is set in <span class=SpellE>xbmc</span>
-setting ‘Instant Recording Duration’) <o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Channels that have no epg entries can now
+be recorded (recording duration is set in xbmc setting ‘Instant Recording
+Duration’) <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>‘Instant Recordings’ can now work on
-channels with no <span class=SpellE>epg</span> entries<o:p></o:p></span></p>
+channels with no epg entries<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Now waits for new in-progress recordings
-to start before returning so <span class=SpellE><span class=GramE>gui</span></span>
-updates are consistent for all client platforms. <o:p></o:p></span></p>
+to start before returning so <span class=GramE>gui</span> updates are
+consistent for all client platforms. <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Better <span class=SpellE>xbmc</span> <span
-class=SpellE>gui</span> updates for multiple clients (recordings, timers, etc),
-especially for non-windows clients<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Better xbmc gui updates for multiple
+clients (recordings, timers, etc), especially for non-windows clients<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed bug that caused <span class=SpellE>wtv</span>
-to be <span class=SpellE>remuxed</span> even though recording had completed.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed bug that caused wtv to be remuxed
+even though recording had completed.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Timers and series timers now deleted by
 ID rather than title, channel or time slot<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Channel line-up can be reloaded from
-button in ‘Channels’ tab, restarting <span class=SpellE>swmc</span> not
-required <o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Channel line-up can be reloaded from button
+in ‘Channels’ tab, restarting swmc not required <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed bug with channel sort when ‘Full Service
-Name’ is chosen<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed bug with channel sort when ‘Full
+Service Name’ is chosen<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>More channel options and channel detail
 logged. <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Better checking of <span class=SpellE>xfer</span>
-strings for illegal chars<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Better checking of xfer strings for
+illegal chars<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>DRM is new checked in preferred tuner
 order, and services are probed looking for copy-free sources<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>For live-<span class=SpellE>tv</span>
-streams, multiple tuners are attempted even if a COM error is thrown trying to
-access recorder<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>For live-tv streams, multiple tuners are
+attempted even if a COM error is thrown trying to access recorder<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Slightly improved live-<span
-class=SpellE>tv</span> tuner acquisition speed by getting rid of unused
-free-time check.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Slightly improved live-tv tuner
+acquisition speed by getting rid of unused free-time check.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Buttons added to ‘Debug’ tab for editing
-and reloading <span class=SpellE>config</span> file. <o:p></o:p></span></p>
+and reloading config file. <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Channels line-up presorted before being
 logged so sort order can be checked<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Loading of <span class=SpellE>wtv</span>
-metadata tags for recordings is turned off by default<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Loading of wtv metadata tags for
+recordings is turned off by default<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Due to a frequent request, a <b>donation</b>
@@ -1299,36 +1298,34 @@ assembly version 1.0.0.25 <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Now sends samba paths to windows clients
-to work with newest <span class=SpellE>gotham</span> <span class=SpellE>nightlies</span><o:p></o:p></span></p>
+to work with newest gotham nightlies<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Series record default settings for <span
-class=SpellE>AnyChannel</span>, <span class=SpellE>AnyTime</span>, <span
-class=SpellE>FirstRunOnly/New&amp;Rerun</span> are now imported from <span
-class=SpellE>wmc</span> (<span class=SpellE>xbmc</span> and mb3)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Series record default settings for
+AnyChannel, AnyTime, FirstRunOnly/New&amp;Rerun are now imported from wmc (xbmc
+and mb3)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Option to switch to <span class=SpellE>pvr-async</span>
-wrapper for COM recorder (enabled by default)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Option to switch to pvr-async wrapper for
+COM recorder (enabled by default)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed series timer editing for <span
-class=SpellE>mediabrowser</span><o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed series timer editing for
+mediabrowser<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Now checks data in encryption <span
-class=SpellE>guid</span> to see if data is actually encrypted.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Now checks data in encryption guid to see
+if data is actually encrypted.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Corrected the <span class=SpellE><span
-class=GramE>gui</span></span> as to which settings are used by <span
-class=SpellE>xbmc</span> only.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Corrected the <span class=GramE>gui</span>
+as to which settings are used by xbmc only.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Added option to log guide image detail<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Add settings for live-<span class=SpellE>tv</span>/active-record
+style='font-family:"Times New Roman"'>Add settings for live-tv/active-record
 buffer delays<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.25in'><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
@@ -1337,29 +1334,27 @@ buffer delays<o:p></o:p></span></p>
 assembly version 1.0.0.24 <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed <span class=SpellE>remux</span>
-problem that can occur in channel changes when last channel bleeds through to
-new stream<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed remux problem that can occur in
+channel changes when last channel bleeds through to new stream<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed exceptions in tuner probe for <span
-class=SpellE>MediaBrowser</span>-Server<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed exceptions in tuner probe for
+MediaBrowser-Server<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed start up failures due to
 non-existent/down watched folders <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed <span class=SpellE>RunAsService</span>
-startup problems<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed RunAsService startup problems<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Added button for opening the service log
 when running-as-service (see debug tab)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Non-default <span class=SpellE>config</span>
-settings now listed in log<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Non-default config settings now listed in
+log<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>More robust exception handling in share
@@ -1377,12 +1372,12 @@ assembly version 1.0.0.23 <o:p></o:p></span></p>
 style='font-family:"Times New Roman"'>Now IPv4 and IPv6 agnostic<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Share state of <span class=SpellE>RecTV</span>
-folder checked and details logged, posts warning dialogs<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Share state of RecTV folder checked and
+details logged, posts warning dialogs<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Added option to set max stream playing
-time for live <span class=SpellE>tv</span><o:p></o:p></span></p>
+time for live tv<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Added ‘Prime Viewing Time’ period<o:p></o:p></span></p>
@@ -1392,40 +1387,36 @@ style='font-family:"Times New Roman"'>Provides tuner status and ability to
 reset tuners to MB-Server<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Now detects when <span class=SpellE>RecTV</span>
-folder has changed<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Now detects when RecTV folder has changed<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Changed the way <span class=SpellE>serverwmc</span>
-suspends sleep mode when clients are online, it now resets system idle timer
-every maintenance interval<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Changed the way serverwmc suspends sleep
+mode when clients are online, it now resets system idle timer every maintenance
+interval<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Sleep mode is NOT suspended if the only
-client is <span class=SpellE>MediaBrowser</span>-Server (option added to
-disable this)<o:p></o:p></span></p>
+client is MediaBrowser-Server (option added to disable this)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Option to launch <span class=SpellE>ServerWMC</span>
-when installation completes<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Option to launch ServerWMC when
+installation completes<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Added more tool tips, and more info about
 which settings only apply to XBMC<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-class=SpellE><span style='font-family:"Times New Roman"'>TempXBMC</span></span><span
-style='font-family:"Times New Roman"'> folder renamed to <span class=SpellE>TempSWMC</span>
-(also no longer hidden when created)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>TempXBMC folder renamed to TempSWMC (also
+no longer hidden when created)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Removed pre-start tuners from live-<span
-class=SpellE>tv</span> tab<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Removed pre-start tuners from live-tv tab<o:p></o:p></span></p>
 
 <p class=MsoPlainText><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoPlainText><span style='font-family:"Times New Roman"'>Build 1118, assembly
-version 1.0.0.22 <o:p></o:p></span></p>
+<p class=MsoPlainText><span style='font-family:"Times New Roman"'>Build 1118,
+assembly version 1.0.0.22 <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed error with metadata reads on
@@ -1456,17 +1447,16 @@ assembly version 1.0.0.21<o:p></o:p></span></p>
 style='font-family:"Times New Roman"'>Works with MediaBrowser3-server<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Channel groups now imported from <span
-class=SpellE>wmc</span> (requires <span class=SpellE>pvr.wmc</span> <span
-class=SpellE>vers</span> 0.1.93 or 0.2.93)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Channel groups now imported from wmc
+(requires pvr.wmc vers 0.1.93 or 0.2.93)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Has the ability to run external programs
 triggered by recording state changes, with configurable parameter replacement <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Setting was added to remove visual/audio/‘<span
-class=SpellE>nar</span>’ ‘impaired’ audio streams (enabled by default)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Setting was added to remove visual/audio/‘nar’
+‘impaired’ audio streams (enabled by default)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Option to suspend sleep mode when clients
@@ -1484,9 +1474,8 @@ style='font-family:"Times New Roman"'>Added logging option for detailed channel
 info<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Hides channels flagged in <span
-class=SpellE>wmc</span> as <span class=SpellE>channeltype</span> ‘<span
-class=SpellE>UserHidden</span>’ <o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Hides channels flagged in wmc as
+channeltype ‘UserHidden’ <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Better crash detection of clients, and
@@ -1497,29 +1486,27 @@ style='font-family:"Times New Roman"'>Maintenance timer and failed stream
 intervals are now settable<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed startup problems when <span
-class=SpellE>config.xml</span> file is corrupted<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed startup problems when config.xml
+file is corrupted<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed <span class=SpellE>remux</span>
-crash when an audio streams are not completely defined<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed remux crash when an audio streams
+are not completely defined<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed ‘<span class=SpellE>remux</span> all’
-debug settings<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed ‘remux all’ debug settings<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed <span class=SpellE>remux</span> bug
-that can occur when <span class=SpellE>video&amp;audio</span> are delayed
-beyond minimal number of headers<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed remux bug that can occur when
+video&amp;audio are delayed beyond minimal number of headers<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed crash when channel icons are copied
 to a read-only network share<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed setting to turn off auto-saving of <span
-class=SpellE>wtv</span> files in <span class=SpellE>savedForDebug</span>.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed setting to turn off auto-saving of
+wtv files in savedForDebug.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Added option to hide all channels from
@@ -1530,8 +1517,8 @@ style='font-family:"Times New Roman"'>Installer is now a single file, no ‘cab1’
 file needed<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Removed <span class=SpellE>wtv</span> header
-logging option from debug tab<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Removed wtv header logging option from
+debug tab<o:p></o:p></span></p>
 
 <p class=MsoPlainText><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
@@ -1541,14 +1528,12 @@ logging option from debug tab<o:p></o:p></span></p>
 assembly version 1.0.0.20<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Play position ‘resume’ point is now
-shared between multiple clients for recordings – <span class=SpellE><b>gotham</b></span>
-clients only<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Play position ‘resume’ point is now shared
+between multiple clients for recordings – <b>gotham</b> clients only<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Preferred tuner order set in <span
-class=SpellE>wmc</span> for viewing a channel with multiple sources is now
-imported for use with live-<span class=SpellE>tv</span><o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Preferred tuner order set in wmc for
+viewing a channel with multiple sources is now imported for use with live-tv<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>When a second client starts watching a
@@ -1556,25 +1541,22 @@ live stream in progress, it starts at the current time , not at time the stream
 was originally started<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed <span class=SpellE>remux</span> bug
-that could cause it to crash when packets are ignored <o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed remux bug that could cause it to
+crash when packets are ignored <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Signal status can be scanned (note
-requires enabling in <span class=SpellE>pvr.wmc</span> <span class=SpellE>addon</span>
-configuration) – <span class=SpellE><b>gotham</b></span> clients only<o:p></o:p></span></p>
+requires enabling in pvr.wmc addon configuration) – <b>gotham</b> clients only<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Send updated server version to client<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed bug in initial <span class=SpellE>drm</span>
-logging<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed bug in initial drm logging<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Added option to view active recording file
-instead of <span class=SpellE>remuxing</span> (only <span class=SpellE><b>gotham</b></span>
-clients allow for resume)<o:p></o:p></span></p>
+instead of remuxing (only <b>gotham</b> clients allow for resume)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Run-as-Service implemented (first cut
@@ -1607,7 +1589,7 @@ assembly version 1.0.0.17<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Added instant record ability when viewing
-live-<span class=SpellE>tv</span><o:p></o:p></span></p>
+live-tv<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Once instant recording starts, record
@@ -1618,12 +1600,11 @@ style='font-family:"Times New Roman"'>Added option to set the amount the end
 time is increased (record tab)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Live-<span class=SpellE>tv</span> AAC
-audio streams now supported<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Live-tv AAC audio streams now supported<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Treats channels with null tuning spaces
-as <span class=SpellE>drm’d</span> channels<o:p></o:p></span></p>
+as drm’d channels<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Added option to use channel service name
@@ -1631,7 +1612,7 @@ instead of call sign (channel tab)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Added option to NOT import channel icons
-from <span class=SpellE>wmc</span> (channel tab)<o:p></o:p></span></p>
+from wmc (channel tab)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Support for no-video-stream type radio
@@ -1646,9 +1627,8 @@ style='font-family:"Times New Roman"'>Allows only one instance of the server to
 run at a time<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Added option to <span class=SpellE>remux</span>
-all previously recorded <span class=SpellE>wtv</span> files on playback (debug
-tab)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Added option to remux all previously
+recorded wtv files on playback (debug tab)<o:p></o:p></span></p>
 
 <p class=MsoPlainText><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
@@ -1658,16 +1638,15 @@ tab)<o:p></o:p></span></p>
 assembly version 1.0.0.16<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Added ability to not transfer image <span
-class=SpellE>urls</span> to client (see Display Options tab)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Added ability to not transfer image urls
+to client (see Display Options tab)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed a live-<span class=SpellE>tv</span>
-bug when connecting to old versions of the client software<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed a live-tv bug when connecting to
+old versions of the client software<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Added monitoring of <span class=SpellE>ts</span>
-performance<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Added monitoring of ts performance<o:p></o:p></span></p>
 
 <p class=MsoPlainText><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
@@ -1689,14 +1668,13 @@ style='font-family:"Times New Roman"'>Added option for close command to
 minimize to system tray<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixes intermittent live-<span
-class=SpellE>tv</span> <span class=SpellE>remux</span> crash bug that hoops
-found.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixes intermittent live-tv remux crash
+bug that hoops found.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed the <span class=SpellE>remux</span>
-crash that happens when starting some AVC broadcast streams in the <st1:country-region
-w:st="on"><st1:place w:st="on">UK</st1:place></st1:country-region>.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed the remux crash that happens when
+starting some AVC broadcast streams in the <st1:country-region w:st="on"><st1:place
+ w:st="on">UK</st1:place></st1:country-region>.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Client stream size query no longer
@@ -1708,12 +1686,12 @@ accesses disk<o:p></o:p></span></p>
 assembly version 1.0.0.14<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Multiple clients can now view a single <span
-class=SpellE>tv</span> channel&nbsp; w/o needing an extra tuner<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Multiple clients can now view a single tv
+channel&nbsp; w/o needing an extra tuner<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Option to output only one language/audio
-channel to <span class=SpellE>ts</span> stream<o:p></o:p></span></p>
+channel to ts stream<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Querying of DRM protection no longer
@@ -1724,14 +1702,12 @@ style='font-family:"Times New Roman"'>%40 replaces ‘@’ when win8 style user
 names are embedded in paths for non-windows clients<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-class=SpellE><span style='font-family:"Times New Roman"'>Remux</span></span><span
-style='font-family:"Times New Roman"'> now runs in thread with variable
-priority (priority set in <span class=SpellE>config</span>)<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Remux now runs in thread with variable
+priority (priority set in config)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed possible <span class=SpellE>int</span>
-overflow in large recorded <span class=SpellE>wtv</span> reads in <span
-class=SpellE>remuxer</span><o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed possible int overflow in large
+recorded wtv reads in remuxer<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>More detailed channel info logged<o:p></o:p></span></p>
@@ -1746,8 +1722,7 @@ from UI<o:p></o:p></span></p>
 assembly version 1.0.0.13<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>WMC watched ‘<span class=SpellE>rec</span>
-<span class=SpellE>tv</span>’ folders now supported<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>WMC watched ‘rec tv’ folders now supported<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Paths are generated separately between
@@ -1758,8 +1733,8 @@ style='font-family:"Times New Roman"'>‘@’ in credential username now handled
 correctly<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Includes failsafe for shutting down <span
-class=SpellE>remux</span> if there is a client-side open stream error <o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Includes failsafe for shutting down remux
+if there is a client-side open stream error <o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Reads posted errors from client if stream
@@ -1767,15 +1742,14 @@ can’t start (requires new client build to work)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Added option to append episode title to
-main title for sports events (<span class=SpellE>epg</span> and recordings)<o:p></o:p></span></p>
+main title for sports events (epg and recordings)<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>If all descriptions are empty in <span
-class=SpellE>epg</span> entry, episode title is used in its place<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>If all descriptions are empty in epg
+entry, episode title is used in its place<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>More logging for paths on <span
-class=SpellE>GetRecordings</span><o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>More logging for paths on GetRecordings<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Stopped crashing due to stale channel id
@@ -1790,8 +1764,8 @@ style='font-family:"Times New Roman"'>Fixed error reporting in tuner pre-start.<
 assembly version 1.0.0.12<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed live-<span class=SpellE>tv</span>
-crash from orphaned data packets and incomplete descriptors<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed live-tv crash from orphaned data packets
+and incomplete descriptors<o:p></o:p></span></p>
 
 <p class=MsoPlainText><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
@@ -1820,8 +1794,8 @@ style='font-family:"Times New Roman"'>Fixed bugs with local and remote channel
 icons<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Added the option to log all <span
-class=SpellE>wtv</span> headers in the debug tab<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Added the option to log all wtv headers
+in the debug tab<o:p></o:p></span></p>
 
 <p class=MsoPlainText><b><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></p>
 
@@ -1841,8 +1815,8 @@ style='font-family:"Times New Roman"'>Added the ability to set embedded
 credentials for use in network paths for non-windows clients<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Additional watched recorded <span
-class=SpellE>tv</span> folders are now logged.<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Additional watched recorded tv folders
+are now logged.<o:p></o:p></span></p>
 
 <p class=MsoPlainText><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
@@ -1869,16 +1843,16 @@ style='font-family:"Times New Roman"'>Fixed intermittent ‘read overflow’ bug
 when starting live streams<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed crash for when <span class=SpellE>guid</span>
-headers are split by meta chunk in live-<span class=SpellE>tv</span> stream<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed crash for when guid headers are
+split by meta chunk in live-tv stream<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed tuner arbitration between <span
-class=SpellE>rec</span> service and multiple clients<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed tuner arbitration between rec
+service and multiple clients<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Better logging of <span class=SpellE>guid</span>
-header types, more header types identified<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Better logging of guid header types, more
+header types identified<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Encryption header types flagged<o:p></o:p></span></p>
@@ -1907,22 +1881,20 @@ assembly version 1.0.0.10<o:p></o:p></span></p>
 style='font-family:"Times New Roman"'>Architecture re-factored<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Complete redo of <span class=SpellE>wtv</span>
-parsing for robustness and faster channel switching<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Complete redo of wtv parsing for
+robustness and faster channel switching<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Added tuner priming<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed ‘recorded <span class=SpellE>tv</span>’
-file deletion<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed ‘recorded tv’ file deletion<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Fixed loading of genre dict.<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Fixed <span class=SpellE>StreamSize</span>
-crash bug<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Fixed StreamSize crash bug<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Added installer minimal UI<o:p></o:p></span></p>
@@ -1939,8 +1911,7 @@ assembly version 1.0.0.8<o:p></o:p></span></p>
 style='font-family:"Times New Roman"'>Compatible with Windows 8 WMC<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>Switched to <span class=SpellE>wix</span>
-installer<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>Switched to wix installer<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Upgraded to .net 4.0<o:p></o:p></span></p>
@@ -1964,7 +1935,7 @@ assembly version 1.0.0.7<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
 style='font-family:"Times New Roman"'>Filtered out channels with null tuning
-space names, disabled <span class=SpellE>wtv</span> streaming<o:p></o:p></span></p>
+space names, disabled wtv streaming<o:p></o:p></span></p>
 
 <p class=MsoPlainText><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
@@ -1972,8 +1943,7 @@ space names, disabled <span class=SpellE>wtv</span> streaming<o:p></o:p></span><
 assembly version 1.0.0.7<o:p></o:p></span></p>
 
 <p class=MsoPlainText style='margin-left:.5in;text-indent:-.25in'><span
-style='font-family:"Times New Roman"'>More <span class=SpellE>epg</span> error
-logging<o:p></o:p></span></p>
+style='font-family:"Times New Roman"'>More epg error logging<o:p></o:p></span></p>
 
 <p class=MsoPlainText><span style='font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
