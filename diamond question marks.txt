@@ -1,0 +1,5 @@
+Word editing is responsible for inserting them, better to edit outside word.
+
+if you get them, add/change this line right after <head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
