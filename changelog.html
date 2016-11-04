@@ -61,39 +61,34 @@ div.Section1
 <div class="Section1">
 <p class="MsoPlainText"><b><span style="font-family: &quot;Times New Roman&quot;;">Server
 change log:<o:p></o:p></span></b></p>
-<p class="MsoPlainText"><b><span style="font-family: &quot;Times New Roman&quot;;"><o:p>&nbsp;</o:p></span></b><b><span style="font-family: &quot;Times New Roman&quot;;"><o:p></o:p></span></b></p><p class="MsoPlainText"><span style="font-family: &quot;Times New Roman&quot;; color: blue;">**Preview
-</span><span style="font-family: &quot;Times New Roman&quot;;">Build
-1243, assembly version 1.0.0.61 <o:p></o:p></span></p>
+<p class="MsoPlainText"><b><span style="font-family: &quot;Times New Roman&quot;;"><o:p>&nbsp;</o:p></span></b></p><p class="MsoPlainText"><span style="font-family: &quot;Times New Roman&quot;;">Build 1244,
+assembly version 1.0.0.62</span><span style="font-family: &quot;Times New Roman&quot;;"></span></p>
 <p class="MsoPlainText"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>- Fixed bug with redirect installer not working in Service mode.</span><span style="font-family: &quot;Times New Roman&quot;;"> <o:p></o:p></span>
+</span>- Fixed bug that cause Forced pre-start padding to be ignored in some cases.</span><span style="font-family: &quot;Times New Roman&quot;;"><o:p></o:p></span>
 </p><p class="MsoPlainText"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span>- Faster serverwmc startup.</span></p>
-<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;"><span class="GramE"></span></span><span style="font-family: &quot;Times New Roman&quot;;"><span style=""></span></span></p><p class="MsoPlainText" style="text-indent: 0.5in;">&nbsp;<span style="font-family: &quot;Times New Roman&quot;;"><span style=""></span></span><span style="font-family: &quot;Times New Roman&quot;;"><b><o:p></o:p></b></span>
-</p><p class="MsoPlainText"><b><span style="font-family: &quot;Times New Roman&quot;;"><o:p>&nbsp;</o:p></span></b></p><p class="MsoPlainText"><span style="font-family: &quot;Times New Roman&quot;; color: blue;">**Preview
-</span><span style="font-family: &quot;Times New Roman&quot;;">Build
-1242, assembly version 1.0.0.61 <o:p></o:p></span></p>
+<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;"><span class="GramE"></span></span><span style="font-family: &quot;Times New Roman&quot;;"><span style=""></span></span></p><p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;"><span style=""></span></span><span style="font-family: &quot;Times New Roman&quot;;"><b><o:p></o:p></b></span>
+</p>
 <p class="MsoPlainText"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span>- DLL version redirection is now handled at runtime, so
 installer works for all&nbsp;win10 configurations. &nbsp;Installer is
 now windows version independent.</span><span style="font-family: &quot;Times New Roman&quot;;"> <o:p></o:p></span>
 </p><p class="MsoPlainText"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>- exits correctly if no wmc DLLs are detected.</span></p>
-<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">- more descriptive <span class="GramE">dialog messages for when serverwmc fails to start</span><o:p></o:p></span></p>
-<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">- <span class="GramE">added a splash screen to show that serverwmc is starting up (can be turned off in settings, disabled in service mode)</span></span><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;</span></span><span style="font-family: &quot;Times New Roman&quot;;"><span class="GramE"></span><o:p></o:p></span>
-</p><p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">- <span class="GramE">reports windows 10 builds correctly in log</span></span><span style="font-family: &quot;Times New Roman&quot;;"><span style=""></span></span></p><p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;"><span style=""></span></span><span style="font-family: &quot;Times New Roman&quot;;"><b><o:p></o:p></b></span>
-</p><p class="MsoPlainText"><b><span style="font-family: &quot;Times New Roman&quot;;"><o:p></o:p></span></b><span style="font-family: &quot;Times New Roman&quot;;"><b><o:p></o:p></b></span></p><p class="MsoPlainText"><span style="font-family: &quot;Times New Roman&quot;; color: blue;">**Preview
-</span><span style="font-family: &quot;Times New Roman&quot;;">Build
-1240, assembly version 1.0.0.61 <o:p></o:p></span></p>
+</span>- Exits correctly if no wmc DLLs are detected (i.e. wmc not installed).</span></p>
+<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">- More descriptive <span class="GramE">dialog messages for when serverwmc fails to start</span><o:p></o:p></span></p>
+<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">- <span class="GramE">Added a splash screen to show that serverwmc is starting up (can be turned off in GUI, disabled in service mode)</span></span><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;</span></span><span style="font-family: &quot;Times New Roman&quot;;"><span class="GramE"></span><o:p></o:p></span>
+</p><p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">- <span class="GramE">Reports windows 10 builds correctly in log</span></span><span style="font-family: &quot;Times New Roman&quot;;"><span style=""></span></span></p><p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;"><span style=""></span></span><span style="font-family: &quot;Times New Roman&quot;;"><b><o:p></o:p></b></span>
+</p>
 <p class="MsoPlainText"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>- play resume points are now
+</span>- Play resume points are now
 shared with WMC (turned on by default)<o:p></o:p></span></p>
-<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">-
-<span class="GramE">standard</span> definition
+<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">- S<span class="GramE">tandard</span> definition
 channels can be automatically
 filtered out of the master channel list (see HideStandardDefChannels)<o:p></o:p></span></p>
-<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">-
-<span class="GramE">added</span> ability to define
-multiple channel groups using xml, look for </span><span style="font-family: &quot;Times New Roman&quot;;">XmlDefinedChannelGroups </span><span style="font-family: &quot;Times New Roman&quot;;">example in the new settings file.<span style="">&nbsp; </span></span></p><p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">&nbsp; Here is an addition
+<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">- A<span class="GramE">dded</span> ability to define
+multiple channel groups using xml</span><span style="font-family: &quot;Times New Roman&quot;;"><span style=""> &nbsp;for serverwmc clients that use channel groups.</span></span></p><p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp;
+Groups can be populated by channel number, range, or call sign.
+&nbsp;Additionally by Standard Def, High Def and Language. &nbsp;</span></span></p><p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp; A group can be&nbsp;</span></span><span style="font-family: &quot;Times New Roman&quot;;"><span style="">designated</span></span><span style="font-family: &quot;Times New Roman&quot;;"><span style=""> as the master channel group by naming the group&nbsp;</span></span><span style="font-family: &quot;Times New Roman&quot;;">_MasterChannelGroup_</span><span style="font-family: &quot;Times New Roman&quot;;"><span style="">.&nbsp; </span></span></p><p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp; Look for </span><span style="font-family: &quot;Times New Roman&quot;;">XmlDefinedChannelGroups </span><span style="font-family: &quot;Times New Roman&quot;;">example in the new settings file.</span><span style="font-family: &quot;Times New Roman&quot;;"> &nbsp;Here is an additional
 example with comments:<o:p></o:p></span></p>
 <p class="MsoPlainText" style="margin-left: 1in;"><span style="font-family: &quot;Times New Roman&quot;;">&lt;XmlDefinedChannelGroups&gt;<o:p></o:p></span></p>
 <p class="MsoPlainText" style="margin-left: 1in;"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;&nbsp;&nbsp;
@@ -130,36 +125,28 @@ es&lt;/IncludeTheseLanguagesOnly&gt; &lt;<span class="GramE">!--</span> only&nbs
 </span>&lt;/XmlDefinedChannelGroup&gt;<o:p></o:p></span></p>
 <p class="MsoPlainText" style="margin-left: 1in;"><span style="font-family: &quot;Times New Roman&quot;;"><span style="">&nbsp;
 </span>&lt;/XmlDefinedChannelGroups&gt;<b><o:p></o:p></b></span></p>
-<p class="MsoPlainText"><b><span style="font-family: &quot;Times New Roman&quot;;"><o:p>&nbsp;</o:p></span></b></p>
-<p class="MsoPlainText"><span style="font-family: &quot;Times New Roman&quot;; color: blue;">**Preview
-</span><span style="font-family: &quot;Times New Roman&quot;;">Build
-1239, assembly version 1.0.0.61 <o:p></o:p></span></p>
-<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">-Attempts
-reopen wmc database if database exceptions are thrown when used with
-epg123<o:p></o:p></span></p>
-<p class="MsoPlainText"><b><span style="font-family: &quot;Times New Roman&quot;;"><o:p>&nbsp;</o:p></span></b></p>
-<p class="MsoPlainText"><span style="font-family: &quot;Times New Roman&quot;; color: blue;">**Preview
-</span><span style="font-family: &quot;Times New Roman&quot;;">Build
-1238, assembly version 1.0.0.61 <o:p></o:p></span></p>
-<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">-Fixed
+
+
+
+<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">- Attempts
+to reopen wmc database if database exceptions are thrown when used with
+epg123 <o:p></o:p></span></p>
+<p class="MsoPlainText" style="text-indent: 0.5in;"><b><span style="font-family: &quot;Times New Roman&quot;;"><o:p></o:p></span></b><span style="font-family: &quot;Times New Roman&quot;;">- Fixed
 media stream codec bug with audio channels (Emby)<o:p></o:p></span></p>
-<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">-Audio
+<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">- Audio
 streams now prioritized by preferred language (Emby)<o:p></o:p></span></p>
-<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">-Audio
-language is now returned as media stream info to Emby<o:p></o:p></span></p>
-<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">-GUI
+<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">- Audio
+language is now returned as media stream info (Emby)<o:p></o:p></span></p>
+<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">- GUI
 changed for preferred live tv language<o:p></o:p></span></p>
-<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">-If
-live streams with monotonic PTS are detected DTS is not generated (on
+<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">- If
+live streams with monotonic PTS are detected, DTS is not generated (on
 by
 default)<span style="color: blue;"><o:p></o:p></span></span></p>
-<p class="MsoPlainText"><span style="font-family: &quot;Times New Roman&quot;;"><o:p>&nbsp;</o:p></span></p>
-<p class="MsoPlainText"><span style="font-family: &quot;Times New Roman&quot;; color: blue;">**Preview
-</span><span style="font-family: &quot;Times New Roman&quot;;">Build
-1237, assembly version 1.0.0.61 <o:p></o:p></span></p>
-<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">-Fixed
-a bug in with live stream file lock check on some systems.<span style="color: blue;"><o:p></o:p></span></span></p>
-<p class="MsoPlainText"><b><span style="font-family: &quot;Times New Roman&quot;;"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoPlainText" style="text-indent: 0.5in;"><span style="font-family: &quot;Times New Roman&quot;;">- Fixed
+a bug&nbsp; with live stream file lock check on some systems.<span style="color: blue;"><o:p></o:p></span></span></p>
+<p class="MsoPlainText"><b><span style="font-family: &quot;Times New Roman&quot;;"><o:p>&nbsp;</o:p></span></b></p><p class="MsoPlainText"><b><span style="font-family: &quot;Times New Roman&quot;;"><o:p></o:p></span></b></p>
 <p class="MsoPlainText"><span style="font-family: &quot;Times New Roman&quot;;">Build 1236,
 assembly version 1.0.0.61 <o:p></o:p></span></p>
 <p class="MsoPlainText" style="margin-left: 0.5in; text-indent: -0.25in;"><span style="font-family: &quot;Times New Roman&quot;;">Fixed a bug in the
