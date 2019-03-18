@@ -190,4 +190,14 @@
     Categories="XBMC PVR Backend">
     <Description>ServerWMC</Description>
   </Update>
+ <Update
+    Channels="Preview"
+    NewVersion="1.0.1257.0"
+    UpdateFileUri="http://bit.ly/swmcPreview-1257"
+    UpdateSignatureUri="https://github.com/ServerWMC/serverwmc.github.io/releases/download/1.0.1257/Installer_ServerWMC.msi.signature"
+    UpdateInfoUri="https://serverwmc.github.io/changelog.html"
+    InstallFileName="Installer_ServerWMC.msi"
+    Categories="XBMC PVR Backend">
+    <Description>ServerWMC</Description>
+  </Update>
 </Updates>
